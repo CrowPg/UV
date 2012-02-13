@@ -1,0 +1,142 @@
+
+
+entity exo1 is
+PORT( PB_0 : IN BIT ;
+		LED_3210, LED_7654 : OUT BIT_VECTOR (3 downto 0);
+      Clk100MHz: in bit);
+      
+end exo1;
+
+architecture Behavioral of exo1 is
+
+signal clk_out : bit := '0';
+constant clock_divisor : integer := 100000000;
+alias reset is PB_0;
+
+begin
+
+PROCESS(Clk100Mhz, reset)
+variable c : integer range 0 to clock_divisor - 1 := 0;
+begin
+	if reset = '1' then
+		c := 0;
+		clk_out <= '0';
+	elsif Clk100MHz'event and Clk100MHz = '1' then
+		if c < (clock_divisor - 1) / 2 then
+			c := c + 1;
+			clk_out <= '0';
+		elsif c = (clock_divisor - 1) then
+			c := 0;
+			clk_out <= '0';
+		else
+			c := c + 1;
+			clk_out <= '1';
+		end if;
+	end if;
+end process;
+
+PROCESS(clk_out)
+VARIABLE etat : INTEGER RANGE 0 TO 19 :=0 ;
+BEGIN
+IF (clk_out 'event AND clk_out='1') THEN
+		CASE etat IS
+			WHEN 0 => LED_7654 (3 DOWNTO 0) <= "1111" ;
+						 LED_3210 (3 DOWNTO 0) <= "0000" ;
+						 etat := etat+1 ;
+			WHEN 8 => LED_7654 (3 DOWNTO 0) <= "1111" ;
+						 LED_3210 (3 DOWNTO 0) <= "0110" ;
+						 etat := etat+1 ;
+			WHEN 10 => LED_7654 (3 DOWNTO 0) <= "0000" ;
+						  LED_3210 (3 DOWNTO 0) <= "1111" ;
+						  etat := etat+1 ;
+			WHEN 18 => LED_7654 (3 DOWNTO 0) <= "0110" ;
+						  LED_3210 (3 DOWNTO 0) <= "1111" ;
+						  etat := etat+1 ;
+		   WHEN 19 => etat := 0 ;
+			WHEN OTHERS => etat := etat+1 ;
+		END CASE ;
+END IF ;
+IF(reset='1') THEN etat:=0; END IF ;
+
+END PROCESS ;
+
+END Behavioral;
+
+
+
+
+
+
+
+
+
+
+
+
+
+entity exo3 is
+PORT( PB_0, PB_1, PB_3  : IN BIT ;
+		LED_3210, LED_7654 : OUT BIT_VECTOR (3 downto 0);
+      Clk100MHz: in bit);
+      
+end exo3;
+
+architecture Behavioral of exo3 is
+
+signal clk_out : bit := '0';
+constant clock_divisor : integer := 100000000;
+alias reset is PB_0;
+
+begin
+
+PROCESS(Clk100Mhz, reset)
+variable c : integer range 0 to clock_divisor - 1 := 0;
+begin
+	if reset = '1' then
+		c := 0;
+		clk_out <= '0';
+	elsif Clk100MHz'event and Clk100MHz = '1' then
+		if c < (clock_divisor - 1) / 2 then
+			c := c + 1;
+			clk_out <= '0';
+		elsif c = (clock_divisor - 1) then
+			c := 0;
+			clk_out <= '0';
+		else
+			c := c + 1;
+			clk_out <= '1';
+		end if;
+	end if;
+end process;
+
+PROCESS(clk_out)
+VARIABLE etat : INTEGER RANGE 0 TO 19 :=0 ;
+BEGIN
+IF (clk_out 'event AND clk_out='1') THEN
+		
+		CASE etat IS
+			WHEN 0 => LED_7654 (3 DOWNTO 0) <= "1111" ;
+						 LED_3210 (3 DOWNTO 0) <= "0000" ;
+						 etat := etat+1 ;
+			WHEN 8 => IF PB_3='1' THEN
+			          LED_7654 (3 DOWNTO 0) <= "1111" ;
+						 LED_3210 (3 DOWNTO 0) <= "0110" ;
+						 etat := etat+1 ;
+						 END IF ;
+			WHEN 10 => LED_7654 (3 DOWNTO 0) <= "0000" ;
+						  LED_3210 (3 DOWNTO 0) <= "1111" ;
+						  etat := etat+1 ;
+			WHEN 18 => IF PB_1='1' THEN
+						  LED_7654 (3 DOWNTO 0) <= "0110" ;
+						  LED_3210 (3 DOWNTO 0) <= "1111" ;
+						  etat := etat+1 ;
+						  END IF ;
+		   WHEN 19 => etat := 0 ;
+			WHEN OTHERS => etat := etat+1 ;
+		END CASE ;
+		
+END IF ;
+IF (reset='1') THEN etat :=0; END IF ;
+END PROCESS ;
+
+END Behavioral;

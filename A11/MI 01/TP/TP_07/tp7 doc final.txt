@@ -1,0 +1,161 @@
+; IMAGE.ASM
+;
+; MI01 - TP Assembleur 2 à 5
+;
+; Réalise le traitement d'une image 32 bits. 
+
+.686
+.MODEL FLAT, C
+
+.DATA
+	
+.CODE
+
+; **********************************************************************
+; Sous-programme _process_image_asm 
+; 
+; Réalise le traitement d'une image 32 bits.
+;
+; Entrées sur la pile : Largeur de l'image (entier 32 bits)
+;			Hauteur de l'image (entier 32 bits)
+;			Pointeur sur l'image source (dépl. 32 bits)
+;			Pointeur sur l'image tampon 1 (dépl. 32 bits)
+;			Pointeur sur l'image tampon 2 (dépl. 32 bits)
+;			Pointeur sur l'image finale (dépl. 32 bits)
+; **********************************************************************
+
+PUBLIC		process_image_asm
+
+process_image_asm	PROC NEAR		; Point d'entrée du sous programme
+		
+		push    ebp    ; sauvegarde ebp
+		mov     ebp, esp  ; ebp sur poiteur de pile
+
+		push    ebx
+		push    esi
+		push    edi
+		
+		mov     ecx, [ebp + 8]  ; ecx = largeur  : ebp pointe sur esp : 8 = 4 (ESP) + 4 (EIP)
+		imul    ecx, [ebp + 12]; taille d'image : ecx = largeur*longeur : 12 = 4 (ESP) + 4 (EIP) + 4 (largeur)
+
+		mov     esi, [ebp + 16] ; pointeur sur le premier pixel
+		mov     edi, [ebp + 20] ; pixel dans le tampon
+
+		;*****************************************************************
+suivant :
+		
+		MOV EAX, [ESI + ECX*4 - 4]
+		MOV EDX, EAX
+		MOV EBX, EAX
+		AND EAX, 00FFh
+		IMUL EAX, 01Dh
+		
+		AND EDX, 0FF00h
+		IMUL EDX, 096h
+		SHR EDX, 8
+		ADD EAX, EDX
+			
+		AND EBX , 0FF0000h
+		IMUL EBX, 04Ch
+		SHR EBX, 16
+		ADD EAX, EBX
+		SHR EAX, 8		
+		
+		MOV [EDI + ECX*4 - 4], EAX
+		DEC ECX
+		CMP ECX, 0
+		JNE suivant
+		
+		
+		;*****************************************************************
+		
+		mov esi, [ebp + 20] ; adresse premier pixel tampon 1 
+		mov edi, [ebp + 24] ; adresse premier pixel tampon 2
+		mov ecx, [ebp+12]; ecx = hauteur  
+		sub ecx, 2
+		mov eax, [ebp+8] ; eax = largeur
+		lea edi, [edi + eax*4 +4] ; pointe sur le premier pixel de sortie utilisable
+		shl ecx, 16 ; partie haute ecx : i, hauteur
+		push ebp
+		mov ebp, eax
+		
+ligne:	
+        add cx, bp ; partie basse ecx : j, largeur
+        sub cx, 2
+		
+colonne:
+		
+		
+		mov eax, [esi]; eax = aij
+		mov edx, eax ; premier terme de la somme pour Gy
+		neg eax ; multiplication de aij par -1
+		mov ebx, eax ; premier terme pour la somme de Gx
+		
+		mov eax, [esi+4] ; eax = ai(j+1)
+		imul eax, 2 ; multiplication de eax par 2
+		add edx, eax ; edx = terme1 + terme2
+		  
+		mov eax, [esi+8]
+		add ebx, eax
+		add edx, eax
+		
+		mov eax, [esi + 4*ebp]
+		imul eax, 2
+		neg eax
+		add ebx, eax
+		
+		mov eax, [esi + 4*ebp + 8]
+		imul eax, 2
+		add ebx, eax
+		
+		mov eax, [esi + 8*ebp]
+		neg eax
+		add ebx, eax
+		add edx, eax
+		
+		mov eax, [esi + 8*ebp + 4]
+		imul eax, 2
+		neg eax
+		add edx, eax
+		
+		mov eax, [esi + 8*ebp + 8]
+		add ebx, eax
+		neg eax
+		add edx, eax
+		
+		cmp ebx, 0
+		JGE positifb
+		neg ebx
+positifb:
+		cmp edx, 0
+		JGE positifd
+		neg edx
+positifd:
+		mov eax, ebx
+		add eax, edx
+		sub eax, 255
+		neg eax
+		mov edx, eax
+		shl eax, 8
+		add eax, edx
+		shl eax, 8
+		add eax, edx
+		mov [edi], eax
+		
+		add esi, 4
+		add edi, 4
+		dec cx
+		test cx, 0FFFFh
+		jnz colonne		
+		
+		
+		add esi, 8
+		add edi, 8
+		sub ecx, 000010000h
+		test ecx, 0FFFF0000h		
+		jnz ligne
+		
+	
+	
+		pop ebp ; on récupère ebp comme il était avant de le modifier	
+fin:	

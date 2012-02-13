@@ -1,0 +1,356 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \\documentclass[11pt, fleqn]\{report\}\
+\\usepackage[utf8]\{inputenc\}\
+\\usepackage\{amsmath\}\
+\\usepackage\{amssymb\}\
+\\renewcommand \\familydefault\{cmss\}\
+\\usepackage[cm]\{sfmath\}\
+\\begin\{document\}\
+\
+\\title\{DM MT23 : Exercices 12 et 16 du Chp. 3\}\
+\\author\{Salah Benmoussati, Julien Descamps, Robin H\'e9rin, Johan Medioni\}\
+\\date \{\}\
+\\maketitle\
+\
+\\noindent Exercice 12\
+\\\\\
+\\\\\
+\
+\\noindent 1. \\, $A=\\left(\\begin\{array\}\{ccc\}\
+1 & 1 & 1\\\\\
+1 & j & j^2\\\\\
+1 & j^2 & j\\\\\
+\\end\{array\}\\right)$ \\newline\
+\\newline\
+Calcul de l'inverse par la m\'e9thode des cofacteurs :\
+\\\\\
+\\\\\
+$A=(a_\{ij\})_\{(i,j)\\in \\\{1,2,3\\\} \}$\
+\\\\\
+\\\\\
+$ cof(a_\{11\}) = \\left|\\begin\{array\}\{cc\}j & j^2 \\\\j^2 & j\\end\{array\}\\right| = (j^2-j^4) = (j-j^2)(j^2+j)=j^2-j $ \\\\\
+$ cof(a_\{12\}) = - \\left|\\begin\{array\}\{cc\}1 & j^2 \\\\1 & j\\end\{array\}\\right| = -( j-j^2 ) = j^2-j $ \\\\\
+$ cof(a_\{13\}) = \\left|\\begin\{array\}\{cc\}1 & j \\\\1 & j^2\\end\{array\}\\right| = j^2-j$ \\\\\
+$ cof(a_\{21\}) = -\\left|\\begin\{array\}\{cc\}1 & 1 \\\\j^2 & j\\end\{array\}\\right| = j^2-j $ \\\\\
+$ cof(a_\{31\}) = \\left|\\begin\{array\}\{cc\}1 & 1 \\\\j & j^2\\end\{array\}\\right| = j^2-j $ \\\\\
+$ cof(a_\{22\}) = \\left|\\begin\{array\}\{cc\}1 & 1 \\\\1 & j\\end\{array\}\\right| = j-1 $ \\\\\
+$ cof(a_\{23\}) = -\\left|\\begin\{array\}\{cc\}1 & 1\\\\1 & j^2\\end\{array\}\\right| = 1-j^2 $ \\\\\
+$ cof(a_\{32\}) = -\\left|\\begin\{array\}\{cc\}1 & 1\\\\1 & j^2\\end\{array\}\\right| = 1-j^2 $ \\\\\
+$ cof(a_\{33\}) = \\left|\\begin\{array\}\{cc\}1 & 1 \\\\1 & j\\end\{array\}\\right| = j-1 $ \\\\\
+\\\\\
+\\\\\
+$ co(U) = \\left(\\begin\{array\}\{ccc\}j^2-j & j^2-j & j^2-j \\\\j^2-j & j-1 & 1-j^2 \\\\j^2-j & 1-j^2 & j-1\\end\{array\}\\right) $\
+\\\\\
+\\\\\
+\\\\\
+\
+\\begin\{align*\}\
+det(U) \
+&= \\left|\\begin\{array\}\{ccc\}1 & 1 & 1 \\\\1 & j & j^2 \\\\1 & j^2 & j\\end\{array\}\\right| \\\\\
+&=  a_\{11\}cof(a11)+a_\{12\}cof(a12)+a_\{13\}cof(a13) \\\\\
+&= 3(j^2-1) \\\\\
+\\end\{align*\}\
+\\\\\
+\\\\\
+\\\\\
+\
+$U^\{-1\} = \\dfrac \{1\} \{det(U)\} co(U) = \\dfrac \{1\}\{3\} \\dfrac \{1\}\{j^2-1\} \\left(\\begin\{array\}\{ccc\}j^2-j & j^2-j & j^2-j \\\\j^2-j & j-1 & 1-j^2 \\\\j^2-j & 1-j^2 & j-1\\end\{array\}\\right)= \\dfrac \{1\}\{3\}\\left(\\begin\{array\}\{ccc\}1 & 1 & 1 \\\\1 & \\frac\{j-1\}\{j^2-1\} & -1 \\\\1 & -1 & \\frac\{j-1\}\{j^2-1\}\\end\{array\}\\right) $\
+\\\\\
+\\\\\
+\\\\\
+\
+\\noindent Exercice 16\
+\\\\\
+\\\\\
+\\noindent 2. $ A=\\left(\\begin\{array\}\{ccc\}1 & -1 & -1 \\\\2 & 2 & -3 \\\\1 & 2 & -1 \\\\4 & 0 & -5\\end\{array\}\\right) $\
+\\\\\
+\\\\\
+\
+\\noindent $ \
+\\begin\{array\}\{cc\}\
+	\\left(\\begin\{array\}\{ccc\}\
+		1 & -1 & -1 \\\\\
+		2 & 2 & -3 \\\\\
+		1 & 2 & -1 \\\\\
+		4 & 0 & -5\
+		\\end\{array\}\\right) \
+	& \\begin\{array\}\{l\}\
+		L_1 \\\\\
+		L_2 \\\\\
+		L_3 \\\\\
+		L_4 \\\\\
+	\\end\{array\}\
+\\end\{array\}\
+$\
+\\\\\
+\\\\\
+\
+\\noindent $ \
+\\begin\{array\}\{cc\}\
+	\\left(\\begin\{array\}\{ccc\}\
+		1 & -1 & -1 \\\\\
+		0 & 4 & -1 \\\\\
+		0 & 3 & 0 \\\\\
+		0 & 4 & -1\
+		\\end\{array\}\\right) \
+	& \\begin\{array\}\{l\}\
+		L_1 \\\\\
+		L_2 \\leftarrow L_2-2L_1 \\\\\
+		L_3\\leftarrow L_3-L_1 \\\\\
+		L_4\\leftarrow L_4-4L_1 \\\\\
+	\\end\{array\}\
+\\end\{array\} $\
+\\\\\
+\\\\\
+\
+\\noindent $\
+\\begin\{array\}\{cc\}\
+	\\left(\\begin\{array\}\{ccc\}\
+		1 & -1 & -1 \\\\\
+		0 & 4 & -1 \\\\\
+		0 & 0 & 3 \\\\\
+		0 & 0 & 0\
+		\\end\{array\}\\right) \
+	& \\begin\{array\}\{l\}\
+		L_1 \\\\\
+		L_2 \\\\\
+		L_3\\leftarrow 4L_3-3L_2  \\\\\
+		L_4\\leftarrow L_4-L_2 \\\\\
+	\\end\{array\}\
+\\end\{array\} $\
+\
+$ \\begin\{cases\}\
+	x_1-x_2-x_3 = 0\\\\\
+	4x_2-x_3 = 0\\\\\
+	3x_3 = 0\
+\\end\{cases\} $ Il vient $x_1=x_2=x_3=0.$\
+\\\\\
+\\\\\
+Avec $b=\\left(\\begin\{array\}\{c\}1 \\\\0 \\\\0 \\\\2\\end\{array\}\\right)$ :\
+\\\\\
+$\\left(\\begin\{array\}\{c\}1 \\\\-2 \\\\-1 \\\\-2\\end\{array\}\\right)$\
+\\\\\
+$\\left(\\begin\{array\}\{c\}1 \\\\-2 \\\\2 \\\\0\\end\{array\}\\right)$ Et le syst\'e8me qui s'en suit est :\
+\\\\\
+$ \\begin\{cases\}\
+	x_1-x_2-x_3 = 1\\\\\
+	4x_2-x_3 = -2\\\\\
+	3x_3 = 2\
+\\end\{cases\}\
+\\Leftrightarrow\
+\\begin\{cases\}\
+	x_1 = \\frac\{4\}\{3\}\\\\\
+	x_2= -\\frac\{1\}\{3\}\\\\\
+	x_3 = \\frac\{2\}\{3\}\
+\\end\{cases\} $\
+\\\\\
+\\\\\
+Avec $b=\\left(\\begin\{array\}\{c\}0 \\\\1 \\\\0 \\\\0\\end\{array\}\\right)$ :\
+\\\\\
+$\\left(\\begin\{array\}\{c\}0 \\\\1 \\\\0 \\\\0\\end\{array\}\\right)$\
+$\\left(\\begin\{array\}\{c\}0 \\\\1 \\\\-3 \\\\-1\\end\{array\}\\right)$ ce qui est impossible car $0\\neq-1$. Pas de solution.\
+\\\\\
+\\\\\
+\\\\\
+\\\\\
+\\noindent 3. $ A=\\left(\\begin\{array\}\{cccc\}1 & -1 & 1 & 1 \\\\1 & 1 & -1 & 2 \\\\0 & 1 & 2 & 0\\end\{array\}\\right) $\
+\\\\\
+\\\\\
+\
+\\noindent $\
+\\begin\{array\}\{cc\}\
+	\\left(\\begin\{array\}\{cccc\}\
+		1 & -1 & 1 & 1 \\\\\
+		0 & 2 & -2 & 1 \\\\\
+		0 & 1 & 2 & 0\
+	\\end\{array\}\\right)\
+	& \\begin\{array\}\{l\}\
+	L_1\\\\\
+	L_2 \\leftarrow L_2-L_1\\\\\
+	L_3\
+	\\end\{array\}\
+\\end\{array\}	 $\
+\\\\\
+\\\\\
+\
+\\noindent $\
+\\begin\{array\}\{cc\}\
+	\\left(\\begin\{array\}\{cccc\}\
+		1 & -1 & 1 & 1 \\\\\
+		0 & 1 & 2 & 0 \\\\\
+		0 & 2 & -2 & 1\
+	\\end\{array\}\\right)\
+	& \\begin\{array\}\{l\}\
+	L_1\\\\\
+	L_2 \\leftarrow L_3\\\\\
+	L_3 \\leftarrow L_2\
+	\\end\{array\}\
+\\end\{array\}	 $\
+\\\\\
+\\\\\
+\
+\\noindent $\
+\\begin\{array\}\{cc\}\
+	\\left(\\begin\{array\}\{cccc\}\
+		1 & -1 & 1 & 1 \\\\\
+		0 & 1 & 2 & 0 \\\\\
+		0 & 0 & -6 & 1\
+	\\end\{array\}\\right)\
+	& \\begin\{array\}\{l\}\
+	L_1\\\\\
+	L_2 \\\\\
+	L_3 \\leftarrow L_3-2L_2\
+	\\end\{array\}\
+\\end\{array\}	 $ \
+\\\\\
+\\\\\
+$ \\begin\{cases\}\
+	x_1-x_2+x_3+x_4 = 0 \\\\\
+	x_2+2x_3 = 0 \\\\\
+	-6x_3+x_4 = 0\
+\\end\{cases\} \
+\\Leftrightarrow\
+\\begin\{cases\}\
+	x_4 = 6x_3\\\\\
+	x_2 = -2x_3\\\\\
+	x_1 = -9x_3\
+\\end\{cases\}$\
+\\\\\
+On a donc : $x=\\alpha \\left(\\begin\{array\}\{c\} -9\\\\-2\\\\1\\\\6 \\end\{array\}\\right)$\
+\\\\\
+Avec $b=\\left(\\begin\{array\}\{l\}b_1 \\\\b_2 \\\\b_3\\end\{array\}\\right)$ : \
+\\\\\
+$\\left(\\begin\{array\}\{l\}b_1 \\\\b_2-b_1 \\\\b_3\\end\{array\}\\right)$\
+\\\\\
+$\\left(\\begin\{array\}\{l\}b_1 \\\\b_3\\\\b_2-b_1\\end\{array\}\\right)$\
+\\\\\
+$\\left(\\begin\{array\}\{l\}b_1 \\\\b_3\\\\b_2-b_1-2b_3\\end\{array\}\\right)$\
+\\\\\
+$ \\begin\{cases\}\
+	x_1-x_2+x_3+x_4 = b_1 \\\\\
+	x_2+2x_3 = b_3 \\\\\
+	-6x_3+x_4 = b_2-b_1-2b_3\
+\\end\{cases\}\
+\\Leftrightarrow\
+\\begin\{cases\}\
+	x_4 = 6x_3 + b_2-b_1-2b_3\\\\\
+	x_2 = -2x_3 + b_3\\\\\
+	x_1 = -9x_3 +2b_1-b_2+3b_3\
+\\end\{cases\}\
+$ \
+\\\\\
+On a donc : $ x = \\alpha \\left(\\begin\{array\}\{c\} -9\\\\-2\\\\1\\\\6 \\end\{array\}\\right) + \\left(\\begin\{array\}\{l\} 2b_1-b_2+3b_3 \\\\ b_3 \\\\\
+0 \\\\ -b_1 + b_2 - 2b_3 \\end\{array\} \\right) $\
+\\\\\
+\\\\\
+\\\\\
+\\\\ \
+\\noindent 4. $ A=\\left(\\begin\{array\}\{cccc\}1 & -1 & 1 & 1 \\\\1 & 1 & -1 & 2 \\\\0 & 2 & -2 & 1\\end\{array\}\\right) $\
+\\\\\
+\\\\\
+$ \\begin\{array\}\{cc\}\
+	\\left(\\begin\{array\}\{cccc\}\
+		1 & -1 & 1 & 1 \\\\\
+		1 & 1 & -1 & 2 \\\\\
+		0 & 2 & -2 & 1\
+	\\end\{array\}\\right)\
+	&\
+	\\begin\{array\}\{l\}\
+		L_1 \\\\\
+		L_2 \\\\\
+		L_3\
+	\\end\{array\}	\
+\\end\{array\} $\
+\\\\\
+\\\\\
+$ \\begin\{array\}\{cc\}\
+	\\left(\\begin\{array\}\{cccc\}\
+		1 & -1 & 1 & 1 \\\\\
+		0 & 2 & -2 & 1 \\\\\
+		0 & 2 & -2 & 1\\end\{array\}\\right)\
+	&\
+	\\begin\{array\}\{l\}\
+		L_1 \\\\\
+		L_2 \\leftarrow L_2-L_1 \\\\\
+		L_3\
+	\\end\{array\}	\
+\\end\{array\} $		\
+\\\\\
+\\\\\
+$ \\begin\{array\}\{cc\}\
+	\\left(\\begin\{array\}\{cccc\}\
+		1 & -1 & 1 & 1 \\\\\
+		0 & -2 & 2 & 1 \\\\\
+		0 & 0 & 0 & 0 \
+	\\end\{array\}\\right)\
+	&\
+	\\begin\{array\}\{l\}\
+		L_1 \\\\\
+		L_2  \\\\\
+		L_3 \\leftarrow L_3-L_2\
+	\\end\{array\}	\
+\\end\{array\} $	\
+\\\\\
+\\\\\
+$ \\begin\{cases\}\
+	x_1-x_2+x_3+x_4=0\\\\\
+	-2x_2+2x_3+x_4=0\\\\\
+\\end\{cases\} \
+\\Leftrightarrow\
+\\begin\{cases\}\
+	x_4=2(x_2-x_3)\\\\\
+	x_1=x_2-x_3-2x_2+2x_3=x_3-x_2\\\\\
+\\end\{cases\}$\
+\\\\\
+\\\\\
+On a donc : \
+\\begin\{align*\} \
+	x\
+	&= (x_3-x_2 ; x_2 ; x_3 ; 2x_2-2x_3)\\\\\
+	&= x_2(-1;1;0;2) + x_3(1;0;1;-2)\\\\\
+	&= \\alpha \\left(\\begin\{array\}\{l\} -1\\\\1\\\\0\\\\2 \\end\{array\}\\right) + \\beta \\left(\\begin\{array\}\{l\} 1\\\\0\\\\1\\\\-2 \\end\{array\} \\right)\
+\\end\{align*\} \
+\\\\\
+\\\\\
+Avec $ b = \\left(\\begin\{array\}\{c\}0 \\\\2 \\\\2\\end\{array\}\\right) $ :\
+\\\\\
+\\\\\
+$ \\left(\\begin\{array\}\{c\}0 \\\\2 \\\\0\\end\{array\}\\right) $\
+\\\\\
+\\\\\
+$ \\begin\{cases\}\
+	x_1-x_2+x_3+x_4=0\\\\\
+	-2x_2+2x_3+x_4=2\\\\\
+\\end\{cases\} \
+\\Leftrightarrow\
+\\begin\{cases\}\
+	x_4=2(x_2-x_3)+2\\\\\
+	x_1=x_2-x_3-2x_2+2x_3-2=x_3-x_2-2\\\\\
+\\end\{cases\}$\
+\\\\\
+\\\\\
+On a donc $ x = \\alpha \\left(\\begin\{array\}\{l\} -1\\\\1\\\\0\\\\2 \\end\{array\}\\right) + \\beta \\left(\\begin\{array\}\{l\} 1\\\\0\\\\1\\\\-2 \\end\{array\} \\right) + \\left(\\begin\{array\}\{c\}1 \\\\0 \\\\0 \\\\1\\end\{array\}\\right) $\
+\\\\\
+\\\\\
+\\\\\
+Avec $ b = \\left(\\begin\{array\}\{c\}1 \\\\1 \\\\1\\end\{array\}\\right) $ :\
+\\\\\
+\\\\\
+$ \\left(\\begin\{array\}\{c\}1 \\\\0 \\\\1\\end\{array\}\\right)\
+\\\\\
+\\\\\
+\\left(\\begin\{array\}\{c\}1 \\\\0 \\\\1\\end\{array\}\\right) $ Ce qui est impossible car $ 0 \\neq 1 $. Pas de solution.\
+\
+	\
+\
+\
+\
+\
+\
+\\end\{document\}\
+}

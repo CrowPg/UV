@@ -1,0 +1,49 @@
+ Exo 1
+
+entity exo1 is
+	PORT ( SW_0, SW_1 : IN BIT ;
+				 LED_0 : OUT BIT) ;
+end exo1;
+
+architecture Behavioral of exo1 is
+begin
+LED_0 <= SW_0 AND SW_1 ;
+
+end Behavioral;
+
+
+
+
+
+
+Exo 2
+
+entity exo2 is
+PORT( SW_10, SW_32 : IN INTEGER RANGE 0 TO 3;
+      LED_10 : OUT INTEGER RANGE 0 TO 3);
+end exo2;
+
+architecture Behavioral of exo2 is
+begin
+LED_10 <= SW_10 + SW_32 ;
+
+end Behavioral;
+
+
+Exo 3
+
+entity exo3 is
+PORT( SW_10, SW_32 : IN INTEGER RANGE 0 TO 3;
+      SW_5, SW_4 : IN BIT;
+      LED_10 : OUT INTEGER RANGE 0 TO 3);
+
+end exo3;
+
+architecture Behavioral of exo3 is
+
+begin
+
+LED_10 <= SW_10 + SW_32  WHEN ((SW_5 = '0') AND (SW_4 = '0')) ELSE
+			 SW_10 - SW_32  WHEN ((SW_5 = '0') AND (SW_4 = '1')) ELSE
+		    SW_10 * SW_32  WHEN ((SW_5 = '1') AND (SW_4 = '0'));
+end Behavioral;
