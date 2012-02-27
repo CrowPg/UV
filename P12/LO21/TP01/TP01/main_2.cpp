@@ -7,3 +7,12 @@
 //
 
 #include <iostream>
+#include <string>
+#include "header.h"
+
+int main (int argc, const char * argv[])
+{
+    
+    g();
+    return 0;
+}
