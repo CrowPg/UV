@@ -17,6 +17,17 @@ int g()
     return 2;
 };
 
+int exercice_1()
+{
+    int r;
+    double p,s;
+    cout << "Donnez le rayon entier du cercle";
+    cin >> r;
+    const double pi=3.14159;
+    p=2*pi*r;
+    s=pi*r*r;
+    cout << "Le cercle de rayon"r"
+};
 int main (int argc, const char * argv[])
 {
     cout << g();
