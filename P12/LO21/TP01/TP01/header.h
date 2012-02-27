@@ -10,6 +10,7 @@
 #define TP01_header_h
 
 int g();
+int exercice_1();
 
 
 #endif
