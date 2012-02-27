@@ -15,7 +15,7 @@ using namespace std ;
 int g()
 {
     return 2;
-};
+}
 
 int exercice_1()
 {
@@ -26,12 +26,14 @@ int exercice_1()
     const double pi=3.14159;
     p=2*pi*r;
     s=pi*r*r;
-    cout << "Le cercle de rayon" << r;
-    cout << "a un périmètre de" << p "et une aire de 
-};
+    cout << "Le cercle de rayon " << r;
+    cout << " a un périmètre de " << p << " et une aire de " << s << ".";
+    return 0;
+}
+
 int main (int argc, const char * argv[])
 {
-    cout << g();
+    cout << exercice_1();
     return 0;
 }
 
