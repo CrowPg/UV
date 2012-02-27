@@ -20,5 +20,7 @@ typedef struct Duree
     unsigned int h;
     unsigned int m;
 } Duree ;
+Duree exercice_3();
+Duree sum(Duree *x, int n);
 
 #endif

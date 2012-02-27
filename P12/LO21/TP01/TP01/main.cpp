@@ -35,23 +35,32 @@ void exercice_2()
     y1=f(x1);
     cout << "Valeur de f(x1)=" << y1;
     cout << "Valeur de f(x2)=" << f(x2);
-}
+;}
 
 int f(int x)
 {
     return x*x-3;
 }
 
-int exercice_3()
+Duree exercice_3()
 {
+    Duree d;
+    Duree tab[MAX]={{1,30},{1,0},{2,30},{1,0},{1,15},{90,7},{0,0},{0,0},{0,0},{0,0}}; //initialisation du tableau pour tester
     
+    d=sum(tab, 5);
+    return d;
 }
 
-Duree sum(Duree* x, int n)
-{
+Duree sum(Duree *x, int n)
+{   
+    int i;
     unsigned int somme_h=0, somme_m=0;
     Duree d;
-    for{}
+    for(i=0; i<n; i++, x++)
+    {
+        somme_h+=x->h;
+        somme_m+=x->m;
+    }
     somme_h+=somme_m/60;
     somme_m%=60;
     d.h=somme_h;
@@ -62,7 +71,7 @@ Duree sum(Duree* x, int n)
 
 int main (int argc, const char * argv[])
 {
-    exercice_2();
+    exercice_3();
     return 0;
 }
 
