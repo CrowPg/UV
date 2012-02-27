@@ -11,6 +11,8 @@
 
 int g();
 void exercice_1();
+int f(int x);
+void exercice_2();
 
 
 #endif

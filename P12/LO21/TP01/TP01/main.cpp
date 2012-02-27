@@ -30,6 +30,19 @@ void exercice_1()
     cout << " a un périmètre de " << p << " et une aire de " << s << ".";
 }
 
+void exercice_2()
+{
+    int x1=10, x2=15, y1;
+    y1=f(x1);
+    cout << "Valeur de f(x1)=" << y1;
+    cout << "Valeur de f(x2)=" << f(x2);
+}
+
+int f(int x)
+{
+    return x*x-3;
+}
+
 int main (int argc, const char * argv[])
 {
     exercice_1();
