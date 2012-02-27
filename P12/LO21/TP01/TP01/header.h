@@ -13,6 +13,7 @@ int g();
 void exercice_1();
 int f(int x);
 void exercice_2();
+const double pi=3.14159;
 
 
 #endif
