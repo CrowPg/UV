@@ -9,10 +9,7 @@
 #ifndef TP01_header_h
 #define TP01_header_h
 
-int g()
-{
-    return 2;
-}
+int g();
 
 
 #endif

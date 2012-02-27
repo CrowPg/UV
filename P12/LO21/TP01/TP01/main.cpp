@@ -10,9 +10,13 @@
 #include <string>
 #include "header.h"
 
+int g()
+{
+    return 2;
+};
+
 int main (int argc, const char * argv[])
 {
-
     g();
     return 0;
 }
