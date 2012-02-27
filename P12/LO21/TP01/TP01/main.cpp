@@ -10,6 +10,8 @@
 #include <string>
 #include "header.h"
 
+using namespace std ;
+
 int g()
 {
     return 2;
@@ -17,7 +19,7 @@ int g()
 
 int main (int argc, const char * argv[])
 {
-    g();
+    cout << g();
     return 0;
 }
 
