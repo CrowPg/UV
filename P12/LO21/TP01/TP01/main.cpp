@@ -46,6 +46,20 @@ int exercice_3()
 {
     
 }
+
+Duree sum(Duree* x, int n)
+{
+    unsigned int somme_h=0, somme_m=0;
+    Duree d;
+    for{}
+    somme_h+=somme_m/60;
+    somme_m%=60;
+    d.h=somme_h;
+    d.m=somme_m;
+    return d;
+    
+}
+
 int main (int argc, const char * argv[])
 {
     exercice_2();

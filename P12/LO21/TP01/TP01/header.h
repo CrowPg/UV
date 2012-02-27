@@ -21,5 +21,4 @@ typedef struct Duree
     unsigned int m;
 } Duree ;
 
-
 #endif
