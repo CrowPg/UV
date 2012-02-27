@@ -45,7 +45,7 @@ int f(int x)
 
 int main (int argc, const char * argv[])
 {
-    exercice_1();
+    exercice_2();
     return 0;
 }
 
