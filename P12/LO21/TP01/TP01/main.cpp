@@ -17,7 +17,7 @@ int g()
     return 2;
 }
 
-int exercice_1()
+void exercice_1()
 {
     int r;
     double p,s;
@@ -28,12 +28,11 @@ int exercice_1()
     s=pi*r*r;
     cout << "Le cercle de rayon " << r;
     cout << " a un périmètre de " << p << " et une aire de " << s << ".";
-    return 0;
 }
 
 int main (int argc, const char * argv[])
 {
-    cout << exercice_1();
+    exercice_1();
     return 0;
 }
 
