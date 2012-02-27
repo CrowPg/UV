@@ -14,6 +14,12 @@ void exercice_1();
 int f(int x);
 void exercice_2();
 const double pi=3.14159;
+const int MAX=10;
+typedef struct Duree
+{
+    unsigned int h;
+    unsigned int m;
+} Duree ;
 
 
 #endif
