@@ -1,0 +1,39 @@
+		Bloc condition si … sinon
+
+if (cond)
+{
+	instructions à exécuter si le test réussit
+}
+else
+{
+	instructions à exécuter sinon
+}
+
+		Comparaison
+
+> < >= <= == !=
+
+		Opérateurs logiques
+
+Et : &&
+Ou : ||
+Non : !
+
+Switch
+
+switch (variable)
+{
+	cas 1 :
+		blabla (instructions exécutées si variable = cas 1)
+		break;
+	cas 2 :
+		blabla
+		break;
+	cas 3 :
+	cas 4 :
+		blabla (exécution si vairable = cas 3 ou cas 4)
+		break;
+	…
+	default :
+		cas par défaut
+}
