@@ -10,17 +10,33 @@
 #define TP01_header_h
 
 int g();
+
 void exercice_1();
+
 int f(int x);
+
 void exercice_2();
+
 const double pi=3.14159;
+
 const int MAX=10;
+
 typedef struct Duree
 {
     unsigned int h;
     unsigned int m;
 } Duree ;
-Duree exercice_3();
+
+void exercice_3();
+
 Duree sum(Duree *x, int n);
+
+typedef struct personne { char nom[30];
+    unsigned int age;
+} personne;
+
+void exercice_4();
+
+personne raz(personne *indiv);
 
 #endif

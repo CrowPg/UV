@@ -42,13 +42,15 @@ int f(int x)
     return x*x-3;
 }
 
-Duree exercice_3()
+void exercice_3()
 {
     Duree d;
     Duree tab[MAX]={{1,30},{1,0},{2,30},{1,0},{1,15},{90,7},{0,0},{0,0},{0,0},{0,0}}; //initialisation du tableau pour tester
     
     d=sum(tab, 5);
-    return d;
+    cout << d.h;
+    cout << "\n";
+    cout << d.m;
 }
 
 Duree sum(Duree *x, int n)
@@ -69,9 +71,23 @@ Duree sum(Duree *x, int n)
     
 }
 
+void exercice_4()
+{
+    
+}
+
+personne raz(personne *indiv)
+{
+    personne p;
+    *indiv->nom = NULL ; // on ne peut pas assigner une valeur (e.g. NULL) à un tableau, or, indiv->nom est un tableau !
+    indiv->age = 0;
+    p = *indiv;
+    return p;
+}
+
 int main (int argc, const char * argv[])
 {
-    exercice_3();
+    exercice_4();
     return 0;
 }
 
