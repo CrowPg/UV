@@ -1,8 +1,8 @@
 //
 //  main.cpp
-//  TP01
+//  TEST
 //
-//  Created by Johan on 27/02/12.
+//  Created by Johan Medioni on 03/03/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -10,7 +10,8 @@
 #include <string>
 #include "header.h"
 
-using namespace std ;
+using namespace std;
+
 
 int g()
 {
@@ -35,7 +36,7 @@ void exercice_2()
     y1=f(x1);
     cout << "Valeur de f(x1)=" << y1;
     cout << "Valeur de f(x2)=" << f(x2);
-;}
+    ;}
 
 int f(int x)
 {
@@ -73,7 +74,14 @@ Duree sum(Duree *x, int n)
 
 void exercice_4()
 {
-    
+    personne p = {"Romain", 21};
+    affiche_struct(&p);
+    cout << "---- RAZ ---- \n\n";
+    raz(&p);
+    affiche_struct(&p);
+    personne tab[MAX]={{"Romain",21},{"Saskia",23},{"Marlène",18},{"Camille",20},{"Julien",19},{"Johan",19},{NULL,0},{NULL,0},{NULL,0},{NULL,0}};
+    cout << "\nAffichage d'un tableau de personnes.\n\n";
+    affiche_tab(tab);
 }
 
 personne raz(personne *indiv)
@@ -85,8 +93,24 @@ personne raz(personne *indiv)
     return p;
 }
 
+void affiche_struct (const personne *p) 
+{
+    cout << "Nom : "<< p->nom << "\n";
+    cout << "Age : "<< p->age << "\n";
+}
+
+void affiche_tab(personne *p)
+{
+    for(int i=0; i<MAX; i++, p++)
+    {
+        affiche_struct(p);
+    }
+}
+
+
 int main (int argc, const char * argv[])
 {
+    
     exercice_4();
     return 0;
 }

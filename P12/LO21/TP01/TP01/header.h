@@ -15,11 +15,13 @@ void exercice_1();
 
 int f(int x);
 
+
 void exercice_2();
 
 const double pi=3.14159;
 
 const int MAX=10;
+
 
 typedef struct Duree
 {
@@ -31,6 +33,8 @@ void exercice_3();
 
 Duree sum(Duree *x, int n);
 
+
+
 typedef struct personne { char nom[30];
     unsigned int age;
 } personne;
@@ -38,5 +42,9 @@ typedef struct personne { char nom[30];
 void exercice_4();
 
 personne raz(personne *indiv);
+
+void affiche_struct (const personne *p);
+
+void affiche_tab (personne *tab);
 
 #endif
