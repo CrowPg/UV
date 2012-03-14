@@ -7,8 +7,9 @@
 //
 
 #include <stdio.h>
+#include "exo5.h"
 
-int somme()
+int somme_5()
 {
     int a, b, c, d, e, f, g, h, i, j;
     printf("Entres les 10 valeurs");
