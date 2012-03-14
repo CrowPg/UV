@@ -37,3 +37,42 @@ switch (variable)
 	default :
 		cas par défaut
 }
+
+		Incrémentation
+
+{
+	a=1;
+	b=a++; \\ b=1 et a=2
+	b=++a; \\ a=3 et b=3
+}
+
+		Boucles
+
+while (condition)
+{
+	...
+}
+
+Tant que la condition est vraie on fait les instructions de la boucle.
+
+do
+{
+	...
+} while (condition)
+
+On exécute les instructions dans la boucle, et si la condition est vraie, on recommence.
+
+for (initialisation ; condition ; pas)
+{
+	...
+}
+
+Initialisation : du type i=0 (il faut avoir déclarer i avant, c'est différent du C++ !!!).
+On exécute les instructions dans la boucle, on applique le pas à l'indice, et on recommence si la condition est vraie.
+
+
+Tableaux
+
+Déclaration : int tab[10]; C'est un tableau de 10 entiers.
+Initialisation : int tab[10]
+Affectations : tab[0]=1; On affecte 1 à la première case du tableau.

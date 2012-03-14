@@ -9,7 +9,12 @@
 #ifndef TD_NF16_Martine_et_le_C_exo5_h
 #define TD_NF16_Martine_et_le_C_exo5_h
 
-int somme_5();
+int somme_5(void);
+float calcul_dec(void);
+float moy_5(void);
+float prod_5(void);
+int diff_a_A(void);
+void MAJ(void);
 
 
 #endif
