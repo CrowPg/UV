@@ -13,6 +13,7 @@
 		040C6EC614FE88AF001A6E20 /* exo2.c in Sources */ = {isa = PBXBuildFile; fileRef = 040C6EC514FE88AF001A6E20 /* exo2.c */; };
 		040C6ECA14FE8C83001A6E20 /* exo3.c in Sources */ = {isa = PBXBuildFile; fileRef = 040C6EC914FE8C83001A6E20 /* exo3.c */; };
 		040C6ECC14FE924E001A6E20 /* exo4.c in Sources */ = {isa = PBXBuildFile; fileRef = 040C6ECB14FE924E001A6E20 /* exo4.c */; };
+		046A3C641510F24A00D19F40 /* exo5.c in Sources */ = {isa = PBXBuildFile; fileRef = 046A3C631510F24A00D19F40 /* exo5.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		040C6EC914FE8C83001A6E20 /* exo3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exo3.c; sourceTree = "<group>"; };
 		040C6ECB14FE924E001A6E20 /* exo4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exo4.c; sourceTree = "<group>"; };
 		040C6ECD14FE9253001A6E20 /* exo4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exo4.h; sourceTree = "<group>"; };
+		046A3C631510F24A00D19F40 /* exo5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exo5.c; sourceTree = "<group>"; };
+		046A3C661510F25300D19F40 /* exo5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exo5.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				040C6EC914FE8C83001A6E20 /* exo3.c */,
 				040C6EC814FE8C6D001A6E20 /* exo3.h */,
 				040C6ECB14FE924E001A6E20 /* exo4.c */,
+				046A3C631510F24A00D19F40 /* exo5.c */,
+				046A3C661510F25300D19F40 /* exo5.h */,
 				040C6ECD14FE9253001A6E20 /* exo4.h */,
 				040C6EBB14FE809A001A6E20 /* TD_NF16_Martine_et_le_C.1 */,
 			);
@@ -141,6 +146,7 @@
 				040C6EC614FE88AF001A6E20 /* exo2.c in Sources */,
 				040C6ECA14FE8C83001A6E20 /* exo3.c in Sources */,
 				040C6ECC14FE924E001A6E20 /* exo4.c in Sources */,
+				046A3C641510F24A00D19F40 /* exo5.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +233,7 @@
 				040C6EC114FE809A001A6E20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

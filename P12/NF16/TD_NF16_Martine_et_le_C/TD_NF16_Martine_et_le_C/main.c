@@ -11,11 +11,12 @@
 #include "exo2.h"
 #include "exo3.h"
 #include "exo4.h"
+#include "exo5.h"
 
 
 int main (int argc, const char * argv[])
 {
-    exercice3_2();
+    somme();
     printf("miaou");
 	return 0;
 }
