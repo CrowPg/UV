@@ -34,10 +34,12 @@ Il ne faut pas oublier les vues !!!\
 \cf0 VueClasse3 = Proj(Rest(Classe1, type=3 ou type=2et3), a, b)\
 \
 \
-\ul H\'e9ritage non exclusif et non complet :\ulnone  
+\ul H\'e9ritage non exclusif et non complet avec une association entre les classes filles :\ulnone  
 \i L\'e0 on pleure, sinon on peut aussi le faire par r\'e9f\'e9rence\
 
 \i0 \
 Classe1(#a, b)\
 Classe2(#a=>Classe1(a), c, d) Note : c est une cl\'e9 candidate\
-Classe3(#a=>Classe1(a), e, f, classe2=>Classe2(a)) Note : e est une cl\'e9 candidate}
+Classe3(#a=>Classe1(a), e, f, classe2=>Classe2(a)) Note : e est une cl\'e9 candidate\
+VueClasse2Complete = Join(Classe1, Classe2, Classe1.a=Classe2.a)\
+VueClasse3Complete = Join(Classe1, Classe3, Classe1.a=Classe3.a)}
