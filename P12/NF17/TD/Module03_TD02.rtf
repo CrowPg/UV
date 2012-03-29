@@ -48,7 +48,7 @@ VueClasse3Complete = Join(Classe1, Classe3, Classe1.a=Classe3.a)\
 \ul Association 1..1 : 1..1\
 \
 \ulnone Classe1(#a, b)\
-Classe2(#c, d, a=>Classe1(a)) a UNIQUE NOT NULL Note : a est une cl\'e9 candidate\
+Classe2(#c, d, a=>Classe1(a)) a UNIQUE NOT NULL Note : a est une cl\'e9 candidate, c serait alors UNIQUE NOT NULL\
 Proj(Classe1, a) 
 \f1 \uc0\u8834 
 \f0 Proj(Classe2, a)\
@@ -59,5 +59,19 @@ Classe(#a, b, c, d) c UNIQUE NOT NULL Note : c est une cl\'e9 candidate, a serai
 \
 \
 \ul Association 0..1 : 1..1\ulnone \
+\
+Classe1(a, b, #c=>Classe2(c)) a UNIQUE NOT NULL\
+Classe2(#c, d)\
+\
+\
+\ul Association 0..1 : 0..1\
+\
+\ulnone Classe1(#a, b)\
+Classe2(#c, d, a=>Classe1(a)) a UNIQUE\
+\
+\
+
+\b \ul Exercice : Gestion de parc informatique
+\b0 \ulnone \
 \
 }
