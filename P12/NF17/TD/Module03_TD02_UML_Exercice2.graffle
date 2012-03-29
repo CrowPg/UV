@@ -435,14 +435,14 @@
 			<key>Head</key>
 			<dict>
 				<key>ID</key>
-				<integer>41</integer>
+				<integer>45</integer>
 			</dict>
 			<key>ID</key>
 			<integer>47</integer>
 			<key>Points</key>
 			<array>
-				<string>{251.35355, 53.353554}</string>
 				<string>{455.64645, 257.64645}</string>
+				<string>{251.35355, 53.353554}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -459,7 +459,7 @@
 			<key>Tail</key>
 			<dict>
 				<key>ID</key>
-				<integer>45</integer>
+				<integer>41</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -468,14 +468,14 @@
 			<key>Head</key>
 			<dict>
 				<key>ID</key>
-				<integer>34</integer>
+				<integer>45</integer>
 			</dict>
 			<key>ID</key>
 			<integer>46</integer>
 			<key>Points</key>
 			<array>
-				<string>{239.25151, 53.494076}</string>
-				<string>{282.12717, 329.50592}</string>
+				<string>{282.12589, 329.50592}</string>
+				<string>{239.25145, 53.494076}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -492,7 +492,7 @@
 			<key>Tail</key>
 			<dict>
 				<key>ID</key>
-				<integer>45</integer>
+				<integer>34</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -501,14 +501,14 @@
 			<key>Head</key>
 			<dict>
 				<key>ID</key>
-				<integer>38</integer>
+				<integer>45</integer>
 			</dict>
 			<key>ID</key>
 			<integer>27</integer>
 			<key>Points</key>
 			<array>
-				<string>{228.59262, 53.432053}</string>
 				<string>{103.32953, 268.45798}</string>
+				<string>{228.59262, 53.432053}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -525,7 +525,7 @@
 			<key>Tail</key>
 			<dict>
 				<key>ID</key>
-				<integer>45</integer>
+				<integer>38</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -934,7 +934,7 @@ Cadence MicroP : int}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-03-29 06:54:02 +0000</string>
+	<string>2012-03-29 06:55:59 +0000</string>
 	<key>Modifier</key>
 	<string>Johan</string>
 	<key>NotesVisible</key>
