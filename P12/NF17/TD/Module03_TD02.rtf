@@ -13,8 +13,12 @@
 \i \ulnone g\'e9n\'e9ralement par les classes filles
 \i0 \
 \
-Classe2 (#a, b, c, d) Note : c est une cl\'e9 candidate\
-Classe3 (#a, b, e, f) Note : e est une cl\'e9 candidate\
+Classe2 (#a, b, c, d) 
+\i Note : c est une cl\'e9 candidate
+\i0 \
+Classe3 (#a, b, e, f) 
+\i Note : e est une cl\'e9 candidate
+\i0 \
 
 \i Pas besoin de vue pour la classe m\'e8re car elle est abstraite. Si elle ne l'avait pas \'e9t\'e9, la vue aurait \'e9t\'e9 comme ceci : 
 \i0 VueClasse1=(Proj(Classe2, a, b) 
@@ -41,8 +45,12 @@ Il ne faut pas oublier les vues !!!\
 
 \i0 \
 Classe1(#a, b)\
-Classe2(#a=>Classe1(a), c, d) Note : c est une cl\'e9 candidate\
-Classe3(#a=>Classe1(a), e, f, classe2=>Classe2(a)) Note : e est une cl\'e9 candidate\
+Classe2(#a=>Classe1(a), c, d) 
+\i Note : c est une cl\'e9 candidate
+\i0 \
+Classe3(#a=>Classe1(a), e, f, classe2=>Classe2(a)) 
+\i Note : e est une cl\'e9 candidate
+\i0 \
 VueClasse2Complete = Join(Classe1, Classe2, Classe1.a=Classe2.a)\
 VueClasse3Complete = Join(Classe1, Classe3, Classe1.a=Classe3.a)\
 \
@@ -50,14 +58,18 @@ VueClasse3Complete = Join(Classe1, Classe3, Classe1.a=Classe3.a)\
 \ul Association 1..1 : 1..1\
 \
 \ulnone Classe1(#a, b)\
-Classe2(#c, d, a=>Classe1(a)) a UNIQUE NOT NULL Note : a est une cl\'e9 candidate, c serait alors UNIQUE NOT NULL\
+Classe2(#c, d, a=>Classe1(a)) a UNIQUE NOT NULL 
+\i Note : a est une cl\'e9 candidate, c serait alors UNIQUE NOT NULL
+\i0 \
 Proj(Classe1, a) 
 \f1 \uc0\u8834 
 \f0 Proj(Classe2, a)\
 \
 ou\
 \
-Classe(#a, b, c, d) c UNIQUE NOT NULL Note : c est une cl\'e9 candidate, a serait alors UNIQUE NOT NULL\
+Classe(#a, b, c, d) c UNIQUE NOT NULL 
+\i Note : c est une cl\'e9 candidate, a serait alors UNIQUE NOT NULL
+\i0 \
 \
 \
 \ul Association 0..1 : 1..1\ulnone \
@@ -100,5 +112,35 @@ R = Rest(EMP, SAL+COM\uc0\u8805 10000)\
 \
 R = Proj(Rest(EMP, ENO=10), ENOM, PROF)\
 \
-R1 = Join(EMP, DEPT, EMP.DNO = DEPT.DNO)\
-R2 = Rest(R1, VILLE='Paris')}
+R1 = Join(EMP, DEPT, EMP.DNO = DEPT.DNO) 
+\i Notes : R1 a 2 DNO en attributs, typiquement les SGBD les renommeraient en leur ajoutant un chiffre, type DNO1, DNO2 ; impossible d'imposer VILLE = 'Paris' comme condition pour une jointure.
+\i0 \
+R2 = Rest(R1, VILLE='Paris')\
+R3 = Proj(R2, ENOM)\
+\
+R1 = Rest(DEPT, DNOM='Commercial')\
+R2 = Join(R1, EMP, R1.DIR=EMP.ENO)\
+R3 = Proj(R2, ENOM)\
+\
+R1 = Join(DEPT, EMP, DEPT.DIR=EMP.ENO)\
+R2 = Proj(R1, PROF)\
+\
+R1 = Rest(EMP, PROF='Ing\'e9nieur')\
+R2 = Join(R1, DEPT, R1.ENO=DEPT.DIR)\
+R3 = Proj(R2, ENOM)\
+\
+
+\b \ul \
+Exercice : Inviter ses amis\
+\
+
+\i\b0 \ulnone Note : tout est cl\'e9.\
+
+\i0 \
+R1= Proj(REPAS, invit\'e9)\
+\
+R1 = Rest(REPAS, invit\'e9='Alice')\
+R2 = Join(MENU, R1, MENU.date=R1.date)\
+R3 = Proj(R2, plat)\
+\
+R1 = Join(MENU, PREFERENCE, MENU.plat=PREFERENCE.}
