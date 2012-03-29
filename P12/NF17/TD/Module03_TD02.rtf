@@ -48,8 +48,16 @@ VueClasse3Complete = Join(Classe1, Classe3, Classe1.a=Classe3.a)\
 \ul Association 1..1 : 1..1\
 \
 \ulnone Classe1(#a, b)\
-Classe2(#c, d, a=>Classe1(a))\
+Classe2(#c, d, a=>Classe1(a)) a UNIQUE NOT NULL Note : a est une cl\'e9 candidate\
+Proj(Classe2, c) 
+\f1 \uc0\u8834 
+\f0 Proj(Classe1, c)\
 \
 ou\
 \
-Classe(#a, b, c, d) c UNIQUE NOT NULL Note : c est une cl\'e9 candidate, a serait alors UNIQUE NOT NULL}
+Classe(#a, b, c, d) c UNIQUE NOT NULL Note : c est une cl\'e9 candidate, a serait alors UNIQUE NOT NULL\
+\
+\
+\ul Association 0..1 : 1..1\ulnone \
+\
+}
