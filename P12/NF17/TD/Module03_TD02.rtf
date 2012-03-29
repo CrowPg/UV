@@ -35,7 +35,9 @@ Il ne faut pas oublier les vues !!!\
 \
 \
 \ul H\'e9ritage non exclusif et non complet :\ulnone  
-\i L\'e0 on pleure\
+\i L\'e0 on pleure, sinon on peut aussi le faire par r\'e9f\'e9rence\
 
 \i0 \
-}
+Classe1(#a, b)\
+Classe2(#a=>Classe1(a), c, d) Note : c est une cl\'e9 candidate\
+Classe3(#a=>Classe1(a), e, f, classe2=>Classe2(a)) Note : e est une cl\'e9 candidate}
