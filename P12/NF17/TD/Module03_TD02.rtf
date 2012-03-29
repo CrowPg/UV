@@ -19,11 +19,23 @@ Classe3 (#a, b, e, f) Note : e est une cl\'e9 candidate\
 \f1 \uc0\u8746 
 \f0  (Proj(Classe3, a, b)).\
 \
+\
 \ul H\'e9ritage complet :
 \i \ulnone  g\'e9n\'e9ralement par la classe m\'e8re
 \i0 \
 \
-Classe1(a, b, type : enum \{2, 3, 2 ou 3, \'f8\}\
+Classe1(a, b, type : enum \{2, 3, 2 et 3, \'f8\}\
 
-\i Le 'ou' assure la non exclusivit\'e9 de l'h\'e9ritage.\
-Il ne faut pas oublier }
+\i Le 'et' assure la non exclusivit\'e9 de l'h\'e9ritage.\
+Il ne faut pas oublier les vues !!!\
+
+\i0 VueClasse2 = Proj(Rest(Classe1, type=2 ou type=2et3), a, b)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 VueClasse3 = Proj(Rest(Classe1, type=3 ou type=2et3), a, b)\
+\
+\
+\ul H\'e9ritage non exclusif et non complet :\ulnone  
+\i L\'e0 on pleure\
+
+\i0 \
+}
