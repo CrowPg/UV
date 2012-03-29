@@ -96,5 +96,9 @@ Contraintes : \
 \b \ul Exercice : Gestion du personnel\
 
 \b0 \ulnone \
+R = Rest(EMP, SAL+COM\uc0\u8805 10000)\
 \
-}
+R = Proj(Rest(EMP, ENO=10), ENOM, PROF)\
+\
+R1 = Join(EMP, DEPT, EMP.DNO = DEPT.DNO)\
+R2 = Rest(R1, VILLE='Paris')}
