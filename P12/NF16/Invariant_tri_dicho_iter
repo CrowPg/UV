@@ -1,0 +1,10 @@
+Procédure recherche dichotomique itérative : recherche d'invariant
+
+1.a) 1≤g≤d≤n
+
+Vrai avant l'entrée dans la boucle
+
+Cas 1 
+X≤T(m) alors d(k+1)=m(k)=[(g(k)+d(k))/2] et g(k+1)=g(k)
+or g(k)<(g(k)+d(k))/2 => g(k) ≤[(g(k)+d(k))/2] (g(k) est entier)
+<=> g(k+1) ≤ d(k+1)
