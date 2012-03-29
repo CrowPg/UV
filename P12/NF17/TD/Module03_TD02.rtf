@@ -74,4 +74,8 @@ Classe2(#c, d, a=>Classe1(a)) a UNIQUE\
 \b \ul Exercice : Gestion de parc informatique
 \b0 \ulnone \
 \
+Serveur (#serial : string, designation : string, HDD : float)\
+PC (#serial : string, RAM : float, CPU : float, Imprimante=>Imprimante(serial) : string)\
+Imprimante(#serial : string, designation ; string, reso : int)\
+Connexsionpcs(#PC=>PC(serial) : string, #serveur=>serveur(serial) : string, quota : float)\
 }
