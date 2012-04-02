@@ -10,7 +10,7 @@ std::ostream& operator<<(std::ostream& f, const TIME::Periode & p){ p.Afficher(f
 
 void TIME::Date::SetDate(unsigned short int j, unsigned short int m, unsigned int a){
 	// initialisation de la date, renvoie vrai si la date est valide
-	if (a>=0&&a<=3000) annee=a; else throw TimeException("erreur: annee invalide");
+	if (a<=3000) annee=a; else throw TimeException("erreur: annee invalide");
 	if (m>=1&&m<=12) mois=m; else throw TimeException("erreur: mois invalide");
 	switch(m){
         case 1: case 3: case 5: case 7: case 8: case 10: case 12: if (j>=1 && j<=31) jour=j; else throw TimeException("erreur: jour invalide"); break;
