@@ -22,7 +22,7 @@ namespace Cinema
         std::string titre;
         Duree duree;
         
-        Film(const std::string _titre, int _duree=0) : titre(_titre), duree(Duree(_duree)){}
+        Film(const std::string _titre=" ", int _duree=0) : titre(_titre), duree(Duree(_duree)){}
         ~Film(){}
         std::string getTitre() const
         {
@@ -32,12 +32,19 @@ namespace Cinema
         {
             return duree;
         }
-        void setTitre(const std::string titre)
+        void setTitre(const std::string &titre)
         {
             this->titre=titre;
         }
-        void setDuree(const TIME
-    }
+        void setDuree(const Duree &duree)
+        {
+            this->duree=duree;
+        }
+        void Afficher(std::ostream &os=std::cout)
+        {
+            os<<titre<<"("<<duree<<")";
+        }
+    };
 }
 
 
