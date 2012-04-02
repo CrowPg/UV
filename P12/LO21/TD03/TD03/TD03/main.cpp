@@ -15,6 +15,10 @@ int main (int argc, const char * argv[])
 {
     Film f;
     f.Afficher();
-    f.setDuree(90);
+    Duree d = Duree(1, 30);
+    d.Afficher();
+    f.setDuree(d);
+    f.setTitre("Film1");
+    f.Afficher();
 }
 

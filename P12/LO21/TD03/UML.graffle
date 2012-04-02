@@ -1449,7 +1449,7 @@ Cinema(const string str, int i);}</string>
 
 \f0\fs24 \cf0 int nb_Max;\
 int nb_Film;\
-Cinematheque *instance}</string>
+Cinematheque *instance;}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -1566,7 +1566,7 @@ const Film&amp; getFilm(const string&amp; str);}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-04-02 13:22:42 +0000</string>
+	<string>2012-04-02 14:09:47 +0000</string>
 	<key>Modifier</key>
 	<string>Johan</string>
 	<key>NotesVisible</key>
@@ -1661,7 +1661,7 @@ const Film&amp; getFilm(const string&amp; str);}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-110, 0}, {780, 619}}</string>
+		<string>{{-110, 143}, {780, 619}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

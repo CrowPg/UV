@@ -34,6 +34,7 @@
 		042FD0A41529DEB100B45E42 /* time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time.h; sourceTree = "<group>"; };
 		042FD0A51529E13100B45E42 /* film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = film.h; sourceTree = "<group>"; };
 		042FD0A61529E13700B45E42 /* film.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = film.cpp; sourceTree = "<group>"; };
+		04AB7A641529EA700054DEAD /* Cinematheque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cinematheque.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 				042FD0A21529DE8D00B45E42 /* time.cpp */,
 				042FD0A41529DEB100B45E42 /* time.h */,
 				042FD0A51529E13100B45E42 /* film.h */,
+				04AB7A641529EA700054DEAD /* Cinematheque.h */,
 				042FD0A61529E13700B45E42 /* film.cpp */,
 			);
 			path = TD03;
@@ -215,6 +217,7 @@
 				042FD0A11529D46000B45E42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
