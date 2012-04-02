@@ -9,6 +9,20 @@
 #ifndef TD03_film_h
 #define TD03_film_h
 
+#include<iostream>
+#include <string>
+#include "time.h"
+
+namespace Cinema
+{
+    class film
+    {
+        std::string titre;
+        TIME::Duree duree;
+    }
+}
+
+
 
 
 #endif
