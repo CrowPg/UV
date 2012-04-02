@@ -13,6 +13,8 @@ using namespace Cinema;
 
 int main (int argc, const char * argv[])
 {
-    Film f = Film("") 
+    Film f;
+    f.Afficher();
+    f.setDuree(90);
 }
 

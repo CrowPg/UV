@@ -22,6 +22,7 @@ namespace Cinema
         std::string titre;
         Duree duree;
         
+    public:
         Film(const std::string _titre=" ", int _duree=0) : titre(_titre), duree(Duree(_duree)){}
         ~Film(){}
         std::string getTitre() const
