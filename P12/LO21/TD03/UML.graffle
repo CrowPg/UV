@@ -644,8 +644,8 @@ Operation}</string>
 			<integer>70</integer>
 			<key>Points</key>
 			<array>
-				<string>{210.81129, 502.58109}</string>
-				<string>{97.990364, 329.41891}</string>
+				<string>{203.11089, 502.57324}</string>
+				<string>{97.403587, 329.42676}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1190,7 +1190,7 @@ Cinema(const string str, int i);}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{98.289978, 503}, {234.71002, 14}}</string>
+					<string>{{98.289978, 503}, {218.71002, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1226,7 +1226,7 @@ Cinema(const string str, int i);}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{98.289978, 517}, {234.71002, 42}}</string>
+					<string>{{98.289978, 517}, {218.71002, 42}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1266,7 +1266,7 @@ Cinematheque *instance}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{98.289978, 559}, {234.71002, 70}}</string>
+					<string>{{98.289978, 559}, {218.71002, 112}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1297,9 +1297,11 @@ Cinematheque *instance}</string>
 
 \f0\fs24 \cf0 Afficher(ostream &amp;os) const;\
 Cinematheque(int nb_Max=10)\
-static Cinematheque@ getInstance();\
+static Cinematheque&amp; getInstance();\
 ~Cinematheque();\
-static void ReleaseInstance();}</string>
+static void ReleaseInstance();\
+void AjouterFilm(const string&amp; str, int duree);\
+const Film&amp; getFilm(const string&amp; str);}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -1507,7 +1509,7 @@ Operation}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-04-02 13:15:09 +0000</string>
+	<string>2012-04-02 13:15:51 +0000</string>
 	<key>Modifier</key>
 	<string>Johan</string>
 	<key>NotesVisible</key>
