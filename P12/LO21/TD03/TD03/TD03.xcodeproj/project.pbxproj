@@ -30,6 +30,7 @@
 		042FD0991529D46000B45E42 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		042FD09B1529D46000B45E42 /* TD03.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TD03.1; sourceTree = "<group>"; };
 		042FD0A21529DE8D00B45E42 /* time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time.cpp; sourceTree = "<group>"; };
+		042FD0A41529DEB100B45E42 /* time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 				042FD0991529D46000B45E42 /* main.cpp */,
 				042FD09B1529D46000B45E42 /* TD03.1 */,
 				042FD0A21529DE8D00B45E42 /* time.cpp */,
+				042FD0A41529DEB100B45E42 /* time.h */,
 			);
 			path = TD03;
 			sourceTree = "<group>";
