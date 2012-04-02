@@ -13,12 +13,30 @@
 #include <string>
 #include "time.h"
 
+using namespace TIME;
+
 namespace Cinema
 {
-    class film
+    class Film
     {
         std::string titre;
-        TIME::Duree duree;
+        Duree duree;
+        
+        Film(const std::string _titre, int _duree=0) : titre(_titre), duree(Duree(_duree)){}
+        ~Film(){}
+        std::string getTitre() const
+        {
+            return titre;
+        }
+        Duree getDuree() const
+        {
+            return duree;
+        }
+        void setTitre(const std::string titre)
+        {
+            this->titre=titre;
+        }
+        void setDuree(const TIME
     }
 }
 
