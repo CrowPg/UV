@@ -41,11 +41,13 @@ namespace Cinema
         {
             this->duree=duree;
         }
-        void Afficher(std::ostream &os=std::cout)
+        void Afficher(std::ostream &os=std::cout) const
         {
             os<<titre<<"("<<duree<<")";
         }
+        
     };
+    std::ostream& operator<<(std::ostream& os, const Film f);
 }
 
 

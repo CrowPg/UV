@@ -8,27 +8,42 @@
 
 #ifndef TD03_Cinematheque_h
 #define TD03_Cinematheque_h
+#include "film.h"
 
 namespace Cinema 
 {
     class Cinematheque
     {
-        int nb_Max;
-        int nb_Film;
-        Cinematheque *instance;
+        unsigned int nb_Max;
+        unsigned int nb_Film;
+        static Cinematheque *instance;
+        Film** tab; //une adresse qui pointe vers une autre adresse qui pointe sur un film
         
     public:
-        Afficher(ostream &os) const
-        {
-            os<<
-        }
-        Cinematheque(int nb_Max=10)
+                
         static Cinematheque& getInstance();
-        ~Cinematheque();
         static void ReleaseInstance();
-        void AjouterFilm(const string& str, int duree);
-        const Film& getFilm(const string& str);
-    }
+        void AjouterFilm(const std::string& titre, int duree);
+        const Film& getFilm(const std::string& str);
+        void Afficher(std::ostream& os=std::cout) const
+        {
+            for (int i=0 ; i<nb_Film ; ++i)
+                os << *tab[i]<<endl;
+        }
+    private:
+        Cinematheque(int n=10) : nb_Max(n), nb_Film(0), tab(new Film*[n]){}
+        ~Cinematheque()
+        {
+            for (int i=0 ; i<nb_Film ; ++i) delete tab[i];
+            delete[] tab;
+        }// singleton => le constructeur et le destructeur doivent être privés
+        Cinematheque& operator=(const Cinematheque& c)
+        {
+            return *this;
+        } // encore pour le singleton
+        
+        
+    };
 }
 
 #endif

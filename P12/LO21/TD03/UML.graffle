@@ -1661,7 +1661,7 @@ const Film&amp; getFilm(const string&amp; str);}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-110, 143}, {780, 619}}</string>
+		<string>{{-110, 164}, {780, 619}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
@@ -1669,7 +1669,7 @@ const Film&amp; getFilm(const string&amp; str);}</string>
 			<array>
 				<string>Canvas 1</string>
 				<real>1</real>
-				<real>1</real>
+				<real>0.98000001907348633</real>
 			</array>
 		</array>
 	</dict>

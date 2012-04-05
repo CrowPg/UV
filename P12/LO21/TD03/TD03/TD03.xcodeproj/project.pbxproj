@@ -11,6 +11,9 @@
 		042FD09C1529D46000B45E42 /* TD03.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 042FD09B1529D46000B45E42 /* TD03.1 */; };
 		042FD0A31529DE8D00B45E42 /* time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 042FD0A21529DE8D00B45E42 /* time.cpp */; };
 		042FD0A71529E13700B45E42 /* film.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 042FD0A61529E13700B45E42 /* film.cpp */; };
+		04AB7A671529F3530054DEAD /* Cinematheque.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04AB7A661529F3530054DEAD /* Cinematheque.cpp */; };
+		04AB7A6A1529FD5D0054DEAD /* programmation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04AB7A691529FD5D0054DEAD /* programmation.cpp */; };
+		04AB7A6F152A06750054DEAD /* Planning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04AB7A6E152A06750054DEAD /* Planning.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +38,13 @@
 		042FD0A51529E13100B45E42 /* film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = film.h; sourceTree = "<group>"; };
 		042FD0A61529E13700B45E42 /* film.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = film.cpp; sourceTree = "<group>"; };
 		04AB7A641529EA700054DEAD /* Cinematheque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cinematheque.h; sourceTree = "<group>"; };
+		04AB7A661529F3530054DEAD /* Cinematheque.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cinematheque.cpp; sourceTree = "<group>"; };
+		04AB7A681529FD540054DEAD /* programmation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = programmation.h; sourceTree = "<group>"; };
+		04AB7A691529FD5D0054DEAD /* programmation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = programmation.cpp; sourceTree = "<group>"; };
+		04AB7A6B152A01170054DEAD /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		04AB7A6C152A03B50054DEAD /* salle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = salle.h; sourceTree = "<group>"; };
+		04AB7A6D152A04C60054DEAD /* Planning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Planning.h; sourceTree = "<group>"; };
+		04AB7A6E152A06750054DEAD /* Planning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Planning.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +82,15 @@
 				042FD0A21529DE8D00B45E42 /* time.cpp */,
 				042FD0A41529DEB100B45E42 /* time.h */,
 				042FD0A51529E13100B45E42 /* film.h */,
-				04AB7A641529EA700054DEAD /* Cinematheque.h */,
 				042FD0A61529E13700B45E42 /* film.cpp */,
+				04AB7A681529FD540054DEAD /* programmation.h */,
+				04AB7A691529FD5D0054DEAD /* programmation.cpp */,
+				04AB7A6C152A03B50054DEAD /* salle.h */,
+				04AB7A6D152A04C60054DEAD /* Planning.h */,
+				04AB7A6E152A06750054DEAD /* Planning.cpp */,
+				04AB7A641529EA700054DEAD /* Cinematheque.h */,
+				04AB7A661529F3530054DEAD /* Cinematheque.cpp */,
+				04AB7A6B152A01170054DEAD /* Header.h */,
 			);
 			path = TD03;
 			sourceTree = "<group>";
@@ -131,6 +148,9 @@
 				042FD09A1529D46000B45E42 /* main.cpp in Sources */,
 				042FD0A31529DE8D00B45E42 /* time.cpp in Sources */,
 				042FD0A71529E13700B45E42 /* film.cpp in Sources */,
+				04AB7A671529F3530054DEAD /* Cinematheque.cpp in Sources */,
+				04AB7A6A1529FD5D0054DEAD /* programmation.cpp in Sources */,
+				04AB7A6F152A06750054DEAD /* Planning.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
