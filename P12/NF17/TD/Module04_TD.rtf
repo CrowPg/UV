@@ -99,7 +99,7 @@ SELECT V.NR, SUM(V.QT) \cf2 AS\cf0  QT_ROUGE_VENDUE FROM VENTES V, PRODUITS P WH
 \i0 \
 \ul Exemple \ulnone : SELECT * FROM user u1, document, version, user u2 WHERE document.id=version.doc  AND d.creator=u1.login AND u2.login=v.contrib;\
 \
-SELECT u.name FROM document d, user u WHERE d.creator=u.login AND UPPER(d.title)='Le Capital';re\
+SELECT u.name FROM document d, user u WHERE d.creator=u.login AND UPPER(d.title)='Le Capital';\
 \
 SELECT DISTINCT d.creator FROM document d, version v WHERE d.creator=v.contrib AND d.creator \cf2 LIKE\cf0  'k%';\
 \
