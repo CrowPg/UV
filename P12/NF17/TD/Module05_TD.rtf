@@ -120,7 +120,11 @@ ORDER BY nbPts DESC;\
 numms est une cl\'e9 candidate.\
 conjoint est un attribut unique pour une donn\'e9e mais pas obligatoire, ce n'est dont pas une cl\'e9 candidate.\
 \
-\
+Leur domaine n'est pas le m\'eame.\
+ALTER TABLE t_personnes\
+MODIFY conjoint number(4);\
+ALTER TABLE t_personnes\
+ADD FOREIGN KEY(conjoint) REFERENCES t_personnes\
 \
 Les DF :\
 pk_n d\'e9termine tout.\
