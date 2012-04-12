@@ -124,7 +124,7 @@ Leur domaine n'est pas le m\'eame.\
 ALTER TABLE t_personnes\
 MODIFY conjoint number(4);\
 ALTER TABLE t_personnes\
-ADD FOREIGN KEY(conjoint) REFERENCES t_personnes\
+ADD FOREIGN KEY(conjoint) REFERENCES t_personnes(pk_n);\
 \
 Les DF :\
 pk_n d\'e9termine tout.\
