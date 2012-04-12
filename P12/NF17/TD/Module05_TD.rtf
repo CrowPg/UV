@@ -122,14 +122,14 @@ conjoint est un attribut unique pour une donn\'e9e mais pas obligatoire, ce n'es
 \
 Leur domaine n'est pas le m\'eame.\
 ALTER TABLE t_personnes\
-MODIFY conjoint number(4);\
+MODIFY conjoint number(4) UNIQUE;\
 ALTER TABLE t_personnes\
 ADD FOREIGN KEY(conjoint) REFERENCES t_personnes(pk_n);\
 \
 Les DF :\
 pk_n d\'e9termine tout.\
 numss aussi.\
-conjoint d\'e9termine tout s'il existe.\
+\
 Csqce : 2NF oui, puisque les cl\'e9s (primaire et candidate) sont atomiques.\
 3NF non, car conjoint n'est pas une cl\'e9 candidate, et pourtant certains attributs en d\'e9pendent.\
 \
