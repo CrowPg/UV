@@ -139,4 +139,22 @@ Csqce : 2NF oui, puisque les cl\'e9s (primaire et candidate) sont atomiques.\
 Transformation en 3NF :\
 Chanteur(#nom, nationalit\'e9)\
 t_personnes => on remet tout sauf chanteur_pr\'e9f\'e9r\'e9 et nationalit\'e9_chanteur_pr\'e9f\'e9r\'e9, \'e0 la place on met Chanteur=>Chanteur(nom).\
+\
+\
+CREATE TABLE Chanteur(\
+nom char(50),\
+nationalit\'e9 char(50),\
+PRIMARY KEY(nom));\
+\
+INSERT INTO Chanteur (nom, nationalit\'e9) \
+SELECT DISTINCT chanteur_pr\'e9f\'e9r\'e9, nationalit\'e9_chanteur_pr\'e9f\'e9r\'e9\
+FROM t_personnes;\
+\
+ALTER TABLE t_personnes\
+DROP nationalit\'e9_chanteur_pr\'e9f\'e9r\'e9;\
+\
+ALTER TABLE t_personnes\
+ADD FOREIGN KEY chanteur_pr\'e9f\'e9r\'e9 REFRENCES Chanteur(nom);\
+\
+\
 }
