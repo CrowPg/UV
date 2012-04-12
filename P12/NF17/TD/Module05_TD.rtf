@@ -129,8 +129,12 @@ ADD FOREIGN KEY(conjoint) REFERENCES t_personnes(pk_n);\
 Les DF :\
 pk_n d\'e9termine tout.\
 numss aussi.\
-\
+chanteur_pr\'e9f\'e9r\'e9
+\f1 \uc0\u10230 
+\f0 nationalit\'e9_chanteur_pr\'e9f\'e9r\'e9\
 Csqce : 2NF oui, puisque les cl\'e9s (primaire et candidate) sont atomiques.\
-3NF non, car conjoint n'est pas une cl\'e9 candidate, et pourtant certains attributs en d\'e9pendent.\
+3NF non, car chanteur_pr\'e9f\'e9r\'e9
+\f1 \uc0\u10230 
+\f0 nationalit\'e9_chanteur_pr\'e9f\'e9r\'e9, et chanteur_pr\'e9f\'e9r\'e9 n'est pas une cl\'e9, nationalit\'e9_chanteur_pr\'e9f\'e9r\'e9 non plus. \
 \
 }
