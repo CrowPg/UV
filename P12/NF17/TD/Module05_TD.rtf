@@ -1,0 +1,112 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Cambria;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11000\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs24 \cf0 \ul \ulc0 Exercice : Carnets de voyages\
+
+\b0 \ulnone \
+Une cl\'e9 est un groupe minimum d'attributs qui permet d'identifier de fa\'e7on unique un tuple.\
+(numAuteur, numVille) est une cl\'e9.\
+
+\f1 \uc0\u10230 
+\f0 numAuteur, numVille, nomAuteur, prenomAuteur, nomVille, nomPays, description\
+
+\i D\'e9pendance fonctionnelle \'e9l\'e9mentaire : d\'e9pendance fonctionnelle irr\'e9ductible ni \'e0 gauche \'e0 ni \'e0 droite.\
+
+\i0 1NF : Oui, les attributs de cette relation sont atomiques\
+2NF : Non, car, par exemple, numAuteur
+\f1 \uc0\u10230 
+\f0 nomAuteur\
+\
+Transformation en 3NF : \
+Auteur(#numAuteur, nomAuteur, prenomAuteur)\
+Ville(#numVille, nomVille, nomPays)\
+CarnetVoyage(#numA=>Auteur(numAuteur), #numV=>Ville(numVille), desc)\
+\
+Code SQL :\
+CREATE TABLE Auteur(\
+	numA int,\
+	nomA, varchar(50)\
+	prenomA, varchar(50),\
+	PRIMARY KEY(numA)\
+	CHECK (nomA NOT NULL));\
+ou\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 CREATE TABLE Auteur(\
+	numA int PRIMARY KEY,\
+	nomA varchar(50) NOT NULL,\
+	prenomA varchar(50));\
+\
+\
+CREATE TABLE Ville(\
+	numV int, \
+	nomV varchar(50),\
+	nomPays varchar(50),\
+	PRIMARY KEY(numV));\
+\
+CREATE TABLE CarnetVoyage(\
+	numV int REFERENCES Villes(numV),\
+	numA int REFERENCES Auteurs(numA),\
+	desc VARCHAR(100),\
+	PRIMARY KEY (numV, numA),\
+	FOREIGN KEY (numV) REFERENCES Villes(numV),\
+	FOREIGN KEY (numA) REFERENCES Auteurs(numA));\
+\
+Trajet(#depart=>Ville(numV), #arrivee=>Ville(numV), #nom, distance)\
+\
+\
+GRANT ALL PRIVILEGES ON Auteur TO Admin;\
+Pareil ON Villes, CarnetVoyage, Trajet\
+\
+GRANT SELECT ONT Auteur TO User;\
+\
+\
+
+\b \ul Exercice : Jeanne et Serge
+\b0 \ulnone \
+\
+Equipe(#nom : string)\
+Joueur(#prenom : string, #equipe : string => Equipe(nom))\
+Match(gagnant : string => Equipe(nom), perdant : string => Equipe(nom), date : date, score : int)\
+Une \'e9quipe ne peut pas jouer contre elle-m\'eame\
+Le score est 0 ou 1\
+2 \'e0 6 joueurs par \'e9quipe\
+\
+\
+CREATE TABLE Equipe(\
+	nom VARCHAR(50),\
+	PRIMARY KEY(nom));\
+\
+CREATE TABLE Joueur(\
+	prenom VARCHAR(30),\
+	equipe VARCHAR(50),\
+	FOREIGN KEY (equipe) REFERENCES Equipe(nom)\
+	PRIMARY KEY (pr\'e9nom, equipe));\
+\
+CREATE TABLE Match(\
+	gagnant VARCHAR(50),\
+	perdant VARCHAR(50),\
+	date date NOT NULL,\
+	score int NOT NULL,\
+	PRIMARY KEY (gagnant, perdant),\
+	FOREIGN KEY (gagnant) REFERENCES Equipe(nom),\
+	FOREIGN KEY (perdant) REFERENCES Equipe(nom),\
+	CHECK ((score=0 OR score = 1) AND (gagnant <> perdant)));\
+\
+
+\i Pour la contrainte 2 \'e0 6 joueurs par \'e9quipe : utiliser un trigger. Il s'agit d'une op\'e9ration SQL qui va \'eatre ex\'e9cut\'e9e automatiquement \'e0 chaque fois qu'il y a un d\'e9clenchement. Ici, ce serait un "INSERT Joueur". Mais \'e7a ne contraint pas le minimum de joueur, seulement le maximum.\
+\
+
+\i0 R1 = PROJ(Match, gagnant)\
+R2 = PROJ(Match, perdant)\
+R3 = INETR(R1, R2)\
+ou\
+R1=JOIN(Match1, Match2, Match1.perdant=Match2.gagnant)\
+R2=proj(R1, gagnant)\
+\
+SELECT M.gagnant, COUNT(*)*2 as nbPts\
+FROM Match M\
+GROUP BY M.gagnant\
+ORDER BY nbPts DESC;}
