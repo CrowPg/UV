@@ -116,4 +116,8 @@ ORDER BY nbPts DESC;\
 \b \ul Exercice : Le chemin \'e0 l'envers\
 \
 
-\b0 \ulnone Cl\'e9 primaire de t_personnes : pk_n.}
+\b0 \ulnone Cl\'e9 primaire de t_personnes : pk_n, il s'agit d'une cl\'e9 artificielle.\
+numms est une cl\'e9 candidate.\
+conjoint est un attribut unique pour une donn\'e9e mais pas obligatoire, ce n'est dont pas une cl\'e9 candidate.\
+\
+La cl\'e9 primaire \'e9tant de type number(4), conjoint ne peut pas r\'e9f\'e9rencer la table car il n'est pas du m\'eame type que sa cl\'e9 primaire.}
