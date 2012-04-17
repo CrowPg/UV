@@ -1,0 +1,29 @@
+#include "B.h"
+
+class A
+{
+	B b;
+	
+	A()
+	{
+		b=B(this);
+	}
+}
+
+
++++++++++++++++++
+
+
+class A;
+
+class B
+{
+	A *a;
+	
+	B(A* _a):A(_a){}
+}
+
+
++++++++++++++++++
+
+C'est ce qu'il faut faire quand deux classes s'utilisent l'une l'autre. On fera appel aux fonctions de A dans B.cpp

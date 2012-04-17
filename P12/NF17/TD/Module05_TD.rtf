@@ -157,4 +157,6 @@ ALTER TABLE t_personnes\
 ADD FOREIGN KEY chanteur_pr\'e9f\'e9r\'e9 REFRENCES Chanteur(nom);\
 \
 \
-}
+SELECT COUNT(*)\
+FROM t_personnes p, t_personnes c\
+WHERE p.chanteur_pr\'e9f\'e9r\'e9 = c.chanteur.pr\'e9f\'e9r\'e9 AND p.conjoint = cq.pk_n}
