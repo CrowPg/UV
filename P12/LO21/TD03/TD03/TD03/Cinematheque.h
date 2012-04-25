@@ -28,7 +28,7 @@ namespace Cinema
         void Afficher(std::ostream& os=std::cout) const
         {
             for (int i=0 ; i<nb_Film ; ++i)
-                os << *tab[i]<<endl;
+                os << *tab[i]<<std::endl;
         }
     private:
         Cinematheque(int n=10) : nb_Max(n), nb_Film(0), tab(new Film*[n]){}

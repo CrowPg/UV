@@ -1,0 +1,223 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		046FEDD2154587B400C4E91D /* TD05.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 046FEDD1154587B400C4E91D /* TD05.1 */; };
+		04A43B7215458809007195B0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A43B7115458809007195B0 /* main.cpp */; };
+		04A43B7515458816007195B0 /* evenement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A43B7415458816007195B0 /* evenement.cpp */; };
+		04A43B771545881B007195B0 /* time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A43B761545881B007195B0 /* time.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		046FEDC9154587B400C4E91D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				046FEDD2154587B400C4E91D /* TD05.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		046FEDCB154587B400C4E91D /* TD05 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TD05; sourceTree = BUILT_PRODUCTS_DIR; };
+		046FEDD1154587B400C4E91D /* TD05.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TD05.1; sourceTree = "<group>"; };
+		04A43B7115458809007195B0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		04A43B7315458810007195B0 /* evenement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evenement.h; sourceTree = "<group>"; };
+		04A43B7415458816007195B0 /* evenement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = evenement.cpp; sourceTree = "<group>"; };
+		04A43B761545881B007195B0 /* time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time.cpp; sourceTree = "<group>"; };
+		04A43B781545881F007195B0 /* time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046FEDC8154587B400C4E91D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		046FEDC0154587B400C4E91D = {
+			isa = PBXGroup;
+			children = (
+				046FEDCE154587B400C4E91D /* TD05 */,
+				046FEDCC154587B400C4E91D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		046FEDCC154587B400C4E91D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046FEDCB154587B400C4E91D /* TD05 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046FEDCE154587B400C4E91D /* TD05 */ = {
+			isa = PBXGroup;
+			children = (
+				04A43B7115458809007195B0 /* main.cpp */,
+				04A43B7315458810007195B0 /* evenement.h */,
+				04A43B7415458816007195B0 /* evenement.cpp */,
+				04A43B781545881F007195B0 /* time.h */,
+				04A43B761545881B007195B0 /* time.cpp */,
+				046FEDD1154587B400C4E91D /* TD05.1 */,
+			);
+			path = TD05;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046FEDCA154587B400C4E91D /* TD05 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046FEDD5154587B400C4E91D /* Build configuration list for PBXNativeTarget "TD05" */;
+			buildPhases = (
+				046FEDC7154587B400C4E91D /* Sources */,
+				046FEDC8154587B400C4E91D /* Frameworks */,
+				046FEDC9154587B400C4E91D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TD05;
+			productName = TD05;
+			productReference = 046FEDCB154587B400C4E91D /* TD05 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046FEDC2154587B400C4E91D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 046FEDC5154587B400C4E91D /* Build configuration list for PBXProject "TD05" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 046FEDC0154587B400C4E91D;
+			productRefGroup = 046FEDCC154587B400C4E91D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046FEDCA154587B400C4E91D /* TD05 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046FEDC7154587B400C4E91D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A43B7215458809007195B0 /* main.cpp in Sources */,
+				04A43B7515458816007195B0 /* evenement.cpp in Sources */,
+				04A43B771545881B007195B0 /* time.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		046FEDD3154587B400C4E91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		046FEDD4154587B400C4E91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		046FEDD6154587B400C4E91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		046FEDD7154587B400C4E91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046FEDC5154587B400C4E91D /* Build configuration list for PBXProject "TD05" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046FEDD3154587B400C4E91D /* Debug */,
+				046FEDD4154587B400C4E91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046FEDD5154587B400C4E91D /* Build configuration list for PBXNativeTarget "TD05" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046FEDD6154587B400C4E91D /* Debug */,
+				046FEDD7154587B400C4E91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 046FEDC2154587B400C4E91D /* Project object */;
+}

@@ -51,7 +51,7 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{582.76935, 583.74213}, {77.4953, 52}}</string>
+			<string>{{583.21448, 583.70532}, {77.4953, 52}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -456,8 +456,8 @@ remise_telephone : numeric\
 			<integer>241</integer>
 			<key>Points</key>
 			<array>
-				<string>{562.70367, 601.70874}</string>
-				<string>{710.77704, 621.93427}</string>
+				<string>{562.70367, 601.64862}</string>
+				<string>{711.89771, 621.93286}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -537,8 +537,8 @@ remise_telephone : numeric\
 			<integer>230</integer>
 			<key>Points</key>
 			<array>
-				<string>{558.81207, 320.94568}</string>
-				<string>{429.12747, 281.07587}</string>
+				<string>{558.81207, 320.93542}</string>
+				<string>{429.22873, 281.07526}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -694,8 +694,8 @@ remise_telephone : numeric\
 			<integer>231</integer>
 			<key>Points</key>
 			<array>
-				<string>{397.95697, 267.26523}</string>
-				<string>{277.54355, 377.10806}</string>
+				<string>{397.95694, 267.2652}</string>
+				<string>{277.54309, 377.108}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -727,8 +727,8 @@ remise_telephone : numeric\
 			<integer>216</integer>
 			<key>Points</key>
 			<array>
-				<string>{254.86772, 221.90935}</string>
-				<string>{268.82703, 376.94702}</string>
+				<string>{254.86763, 221.90935}</string>
+				<string>{268.82498, 376.94702}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -805,8 +805,8 @@ remise_telephone : numeric\
 			<integer>212</integer>
 			<key>Points</key>
 			<array>
-				<string>{630.30768, 105.914}</string>
-				<string>{515.35419, 153.14944}</string>
+				<string>{630.30762, 105.90509}</string>
+				<string>{515.29663, 153.14891}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1601,8 +1601,8 @@ remise_telephone : numeric\
 			<integer>159</integer>
 			<key>Points</key>
 			<array>
-				<string>{266.64136, 179.1597}</string>
-				<string>{398.66708, 102.25169}</string>
+				<string>{266.64108, 179.1597}</string>
+				<string>{398.66379, 102.25167}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1814,7 +1814,7 @@ date_premier_achat : date}</string>
 			<key>Points</key>
 			<array>
 				<string>{548.65173, 456.22632}</string>
-				<string>{474.74683, 532.36023}</string>
+				<string>{474.74738, 532.36023}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2781,8 +2781,8 @@ prix_base : numeric\
 			<integer>27</integer>
 			<key>Points</key>
 			<array>
-				<string>{452.0314, 102.39246}</string>
-				<string>{491.93719, 152.94687}</string>
+				<string>{452.03598, 102.3924}</string>
+				<string>{491.95239, 152.94644}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2988,7 +2988,7 @@ tactile? : boolean\
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{162.31897, 105.88937}, {65, 24}}</string>
+			<string>{{162.31732, 105.88941}, {65, 24}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -3149,8 +3149,8 @@ prix_base : numeric}</string>
 			<integer>39</integer>
 			<key>Points</key>
 			<array>
-				<string>{146.65184, 62.303894}</string>
-				<string>{247.80284, 179.03342}</string>
+				<string>{146.65163, 62.303883}</string>
+				<string>{247.79959, 179.03351}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3335,7 +3335,7 @@ prix_base : numeric}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{557, 4}, {721, 774}}</string>
+		<string>{{3, 4}, {1275, 774}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -3349,7 +3349,7 @@ prix_base : numeric}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{38, 161}, {586, 619}}</string>
+		<string>{{-11, 161}, {1140, 619}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
