@@ -1,0 +1,33 @@
+int cnp(int n, int p){
+	if (p==0 || p==n)
+		return 1;
+	else
+		return (cnp(n-1, p)+cnp(n-1, p-1));
+}
+
+Test pour n=4 et p=2
+
+p=2, n=4 :
+	cnp(n-1, p)+cnp(n-1, p-1)
+	n=3, p=2 :
+		cnp(n-1, p)+cnp(n-1, p-1)
+		n=2, p=2 :
+			1
+		n=2, p=1 :
+			cnp(n-1, p)+cnp(n-1, p-1)
+			n=1, p=1 :
+				1
+			n=1, p=0 :
+				1
+			2
+		3
+	n=3, p=1 :
+		cnp(n-1, p)+cnp(n-1, p-1)
+		n=2, p=1 :
+			2
+		n=2, p=0 :
+			1
+		2
+	6
+
+Résultat correct, mais on calcul plusieurs fois les mêmes choses.

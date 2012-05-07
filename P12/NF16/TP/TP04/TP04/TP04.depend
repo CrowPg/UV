@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1335456076 source:/Users/johan/SparkleShare/UV/P12/NF16/TP/TP04/TP04/TP4.c
+	"TP3.h"
+
+1335456047 /Users/johan/SparkleShare/UV/P12/NF16/TP/TP04/TP04/TP3.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1335456757 source:/Users/johan/SparkleShare/UV/P12/NF16/TP/TP04/TP04/main.c
+	<stdio.h>
+	<stdlib.h>
+	"TP3.h"
+

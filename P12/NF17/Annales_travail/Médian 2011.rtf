@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 Exercice 2\
+\
+Attribut : Classe1(#a, b)\
+\
+Attribut compos\'e9 : Classe1(#a, b_b1, b_b2)\
+\
+Attribut multivalu\'e9 : \
+	Classe1(#a)\
+	ClasseB(#a=>Classe1(a), #b)\
+\
+Attribut d\'e9riv\'e9 et m\'e9thode : Classe1(#a)\
+\
+Association 1:N :\
+	Classe1(#a, b)\
+	Classe2(#c, d, a=>Classe1(a)) a NOT NULL\
+	Classe1 AND Classe2\
+\
+Association N:M : \
+	Classe1(#a, b)\
+	Classe2(#c, d)\
+	Assoc(#a=>Classe1(a), #c=>(Classe2(c))\
+	Classe1 AND Classe2\
+\
+Classe d'association 1:N\
+	Classe1(#a, b)\
+	Classe2(#c, d, a=>Classe1(a), e, f) e cl\'e9 candidate et a NOT NULL\
+	Classe1 AND Classe2\
+\
+Classe d'association N:M\
+	Classe1(#a, b)\
+	Classe2(#c, d)\
+	Assoc(#a=>Classe1(a), #c=>Classe2(c), #e, f)\
+	Classe1 AND Classe2\
+\
+Composition\
+	Classe1(#a, b)\
+	Classe2(#c, d, #a=>Classe1(a))\
+\
+Agr\'e9gation 1:N\
+	Classe1(#a, b)\
+	Classe2(#c, d, a=>Classe1(a))\
+\
+Agr\'e9gation N:M\
+	Classe1(#a, b)\
+	Classe2(#c, d)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 	Agreg(#a=>Classe1(a), #c=>Classe1(c))\
+\
+H\'e9ritage exclusif (classe m\'e8re abstraite)\
+	Classe2(#c, d, a, b) a cl\'e9 candidate\
+	Classe3(#e, f, a, b) a cl\'e9 candidate\
+\
+H\'e9ritage complet\
+	Classe1(#a, b, t:\{2,3\})\
+	vClasse2=Rest(Classe1, t=2 ou t=23)\
+	vClasse3=Rest(Classe1, t=3 ou t=23)\
+\
+H\'e9ritage non exclusif et non complet\
+	Classe1(#a, b)\
+	Classe2(#c, d, #a=>Classe1(a))\
+	Classe3(#e, f, #a=>Classe1(a))\
+	Assoc(#c=>Classe2(c), #e=>Classe3(e)\
+	vClasse2=Join(Classe1, Classe2,  a.Classe1=a.Classe2)\
+	vClasse3=Join(Classe1, Classe3, a.Classe1=a.Classe3)\
+\
+Association 1:1\
+	Classe1(#a, b)\
+	Classe2(#c, d, a=>Classe1(a)), a cl\'e9 candidate\
+	Classe1 AND Classe2\
+\
+Association 0..1:1\
+	Classe1(#a, b, c=>Classe2(c)) c cl\'e9 candidate\
+	Classe2(#c, d)\
+\
+Associaition 0..1:1\
+	Classe1(#a, b)\
+	Classe2(#c, d, a=>Classe1(a)) a UNIQUE}
