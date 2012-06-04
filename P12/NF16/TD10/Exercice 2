@@ -1,0 +1,10 @@
+Exercice 2
+
+Fonction enraciner (v : entier, a : arbre) : abr
+	Si v<a.cle alors
+		a.g = enraciner(v, a.g)
+		rotation_droite(a,a)
+	sinon si v>a.cle
+		a.d = enraciner(v, a.d)
+		rotation_gauche(a,a)
+	sinon retour a

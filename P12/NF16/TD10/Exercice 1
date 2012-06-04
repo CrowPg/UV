@@ -1,0 +1,65 @@
+ Question B
+ 
+ Rotd(a, x : arbre)
+  	y<-x.g
+ 	b<-y.g
+ 	c<-y.d
+ 	d<-x.d
+ 	Si x≠a alors // si x n'est pas racine de l'arbre a
+ 		Si x=x.pere.g alors
+ 			x.pere.g<-y
+ 		Sinon
+ 			x.pere.d<-y
+ 		Fin si
+ 	y.pere<-x.pere
+ 	Sinon
+ 		y.pere<-nul
+ 		a<-y
+ 	Fin si
+ 	y.d<-x
+ 	x.pere<-y
+ 	x.g<-c
+ 	c.pere<-x
+ 	
+//Complément pour Question E 	
+
+ 	h1<-x.h
+ 	x.h<-1+max(c.h, d.h)
+ 	y.h<-1+max(b.h, x.h)
+ 	delta<-y.h-h1
+ 	Si delta≠0
+ 		v<-y
+ 		Tant que v.pere≠nul et delta≠0
+ 			Si v=v.pere.g alors
+ 				u<-v.pere.d
+ 			Sinon u<-v.pere.g // u est le frère de v
+ 			Fin si
+ 			Si u.h<v.h ou (u.h=v.h et delta>0) alors
+ 				v<-v.pere
+ 				v.h<-v.h+delta
+ 			Sinon delta <-0.
+ 		Fin tant que
+ 	Fin si
+ Fin
+ 	
+ Rotg(a, x : arbre)
+ 	y<-x.g
+ 	b<-y.g
+ 	c<-y.d
+ 	d<-x.d
+ 	Si x≠a alors
+ 		Si x=x.pere.g alors
+ 			x.pere.g<-y
+ 		Sinon
+ 			x.pere.d<-y
+ 		Fin si
+ 	y.pere<-x.pere
+ 	Sinon
+ 		y.pere<-nul
+ 		a<-y
+ 	Fin si
+ 	y.g<-x
+ 	x.pere<-y
+ 	x.d<-c
+ 	c.pere<-x
+ Fin

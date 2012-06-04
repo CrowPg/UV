@@ -1,0 +1,47 @@
+Rotdeq(x : avl) : avl
+	y, c : avl
+	eqx, eqy : entier
+	y<-x.g
+	c<-y.d
+	eqx<-x.eq
+	eqy<-y.eq
+	//Rotation
+	y.d<-x
+	x.g<-c
+	//Mise à jour des équilibres
+	x.eq<-eqx-1-max(eqy, 0)
+	Si x.eq≥0 alors
+		y.eq<-eqy-1
+	Sinon
+		y.eq<-eqx-2+min(0, eqy)
+	Fin si
+	Retour y
+	
+	
+	
+Rotdeq(x : avl) : avl
+	y, c : avl
+	eqx, eqy : entier
+	y<-x.g
+	c<-y.d
+	eqx<-x.eq
+	eqy<-y.eq
+	//Rotation
+	y.d<-x
+	x.g<-c
+	//Mise à jour des équilibres
+	x.eq<-eqx-1-max(eqy, 0)
+	Si x.eq≥0 alors
+		y.eq<-eqy-1
+	Sinon
+		y.eq<-eqx-2+min(0, eqy)
+	Fin si
+	//Calcul de DELTA
+	Si eqx≤0 alors
+		DELTA<-1
+	Sinon si y.eq≥0 alors
+		DELTA<-(-1)
+	Sinon
+		DELTA<-0
+	Fin si
+	Retour y
