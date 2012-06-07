@@ -92,4 +92,9 @@ CREATE TYPE BODY Carnivore IS\
 	MEMBER FUNCTION PMMT RETURNS float IS\
 	res float;\
 	BEGIN\
-		SELECT SUM(}
+		SELECT SUM(tm.pmm) INT() res\
+		FROM tMange \'99\
+		WHERE self.nom = \'99.carni.nom;\
+		RETURN res;\
+	END PMMT;\
+END; }
