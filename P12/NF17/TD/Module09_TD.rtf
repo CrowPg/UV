@@ -1,0 +1,79 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleSymbols;}
+{\colortbl;\red255\green255\blue255;\red0\green68\blue254;\red46\green111\blue253;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 OID lance une fl\'e8che en UML. "On place la classe de l'OID au centre de la BDD."\
+\
+
+\b \ul Exercice : Passage conceptuel logique
+\b0 \ulnone \
+\
+C(#pkC : integer, pkA : integer, att1 : string) pkA cl\'e9 candidate\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 B(#pkA : integer, att1 : string, C=>pkC(C) : integer)\
+Att2(#att2 : string, #C=>pkC(C) : integer)\
+Hypoth\'e8se : on peut avoir la m\'eame valeur de att2 pour 2 C diff\'e9rents.\
+vA = Proj(C, pkA, att1) 
+\f1 \uc0\u8746  
+\f0  Proj(B, pk1, att1)\
+\
+CREATE TABLE C(pkA int UNIQUE NOT NULL, att1 VARCHAR(50), pkC int, PRIMARY KEY(pkC));\
+CREATE TABLE B(pkA int, att1 VARCHAR(50), pkC int, PRIMARY KEY(pkA), FOREIGN KEY(pkC) REFERENCES C(pkC));\
+CREATE TABLE Att2(att2 VARCHAR(50), pkC int REFERENCES C(pkC) PRIMARY KEY(att2, pkC));\
+CREATE VIEW vA AS (SELECT pkA, att1 FROM B) UNION (SELECT pkA, att1 FROM B);\
+\
+\cf2 TypeA\cf0 (pkA : int, att1 : string)\
+\cf2 Type liste_att2 : collection de string\cf0 \
+\cf2 TypeC h\'e9rite\cf0  de A(pkC : int, att2 : liste_att2)\
+TypeB h\'e9rite de A(C_OID\cf2  =>o\cf0  C)\
+On ne met pas de contraintes sur les types en RO\
+tC de C(#pkA) pkC cl\'e9 candidate\
+tB de B(#pkA)\
+\
+-- Code SQL3 (Oracle) :\
+CREATE TYPE A AS OBJECT(\
+	pk1 int, \
+	att1 VARCHAR(50)) NOT FINAL ; \
+-- NOT FINAL : il y a de l'h\'e9ritage RO derri\'e8re\
+-- AS OBJECT : pour dire que c'est de l'objet\
+CREATE TYPE liste_att2 AS TABLE OF VARCHAR(50);\
+-- AS TABLE OF : pour faire une collection de \'85\
+CRATE TYPE C UNDER A(\
+	pkC int, \
+	att2 liste_att2);\
+-- UNDER : h\'e9rite\
+CREATE TYPE B UNDER A(\
+	C_OID REF C);\
+-- REF permet de faire une r\'e9f\'e9rence par OID\
+CREATE TABLE tC OF C(\
+	PRIMARY KEY(pkA), \
+	UNIQUE pkC, \
+	CHECK (pkC IS NOT NULL))\
+	NESTED TABLE att2 STORE AS NT_tC_att2;\
+-- NESTED TABLE : pour faire un nid de tables \'e0 c\'f4t\'e9 (probl\'e8me de taille sinon)\
+CREATE TABLE tB of B(\
+	PRIMARY KEY(pkA), \
+	SCOPE FOR (C_OID) IS tC);\
+\
+
+\b \ul Exercice : Zoologie
+\b0 \ulnone \
+\
+Type Animal(nom : string, taille : float, poids : float)\
+Type Carnivore h\'e9rite de Animal(=PMMT() : float)\
+Type Herbivore h\'e9rite de Animal(PMM : float)\
+Type Mange(carni =>o Carnivore, herbi =>o Herbivore, PMM : float)\
+tCarnivore de Carnivore (#nom)\
+tHerbivore de Herbivore(#nom)\
+tMange de Mange()\
+\
+CREATE TYPE Animal AS OBJECT(\
+	nom VARCHAR(25),\
+	taille float,\
+	taille float) NOT FINAL;\
+CREATE TYPE Herbivore UNDER Animal(\
+	PMM float);\
+CREATE TYPE Carnivore UNDER Animal(\
+	\cf3 MEMBER FUNCTION\cf0  PMMT \cf3 RETURNS\cf0  float)}
