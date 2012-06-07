@@ -115,4 +115,9 @@ Type Liste_Conducteurs : collection de <Ref_Cond>\
 Type Voiture(#Type : string, #Marque : string, NbPortes : int, Puissance : int\'e8gre, Kilom\'e9trage : int, propri =>o Personne(nom) : string)\
 Type liste_pr\'e9nom : collection de <string>\
 Type Personne(#Nom : string, pr\'e9nom : liste_pr\'e9nom, DateNaissance : date, =Age() : int)\
-Type Conducteur(Nom : string, type Permis : char(1), dateP : date)}
+Type Conducteur(Nom : string, type Permis : char(1), dateP : date)\
+tPersonne de Personne(#nom)\
+tConducteur de Conducteur(#nom=>tPersonne(nom))\
+tVoiture de Voiture(#type, #marque)\
+\
+}
