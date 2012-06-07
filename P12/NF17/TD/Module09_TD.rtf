@@ -78,10 +78,13 @@ CREATE TYPE Herbivore UNDER Animal(\
 CREATE TYPE Carnivore UNDER Animal(\
 	\cf3 MEMBER FUNCTION\cf0  PMMT \cf3 RETURNS\cf0  float)\
 CREATE TYPE Mange AS OBJECT(\
-	REF Carnivore, \
-	REF Herbivore,\
+	carni REF Carnivore, \
+	herbi REF Herbivore,\
 	PMM : float);\
 CREATE TABLE tCarni OF Carnivore(\
 	PRIMARY KEY(nom));\
 CREATE TABLE THerbi OF Herbivore(\
-	PRIMARY KEY(nom));}
+	PRIMARY KEY(nom));\
+CREATE TABLE tMange OF Mange(\
+	SCOPE FOR (herbi) is tHerbi,\
+	SCOPE FOR (carni) is tCarni);}
