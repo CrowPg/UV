@@ -112,7 +112,7 @@ CREATE INDEX idx_carni_poids ON tCarni(poids);\
 Type Ref_Cond(Cond_OID =>o Conducteur)\
 Type Liste_Conducteurs : collection de <Ref_Cond>\
 -- On \'e9vite ainsi des probl\'e8mes de redondance. Sans \'e7a, on aurait une table de conducteurs dans la table voiture or nous voulons une table qui fait r\'e9f\'e9rence \'e0 ces conducteurs dans la table voiture !\
-Type Voiture(#Type : string, #Marque : string, NbPortes : int, Puissance : int\'e8gre, Kilom\'e9trage : int, propri =>o Personne(nom) : string, conducteurs : ListesConducteurs)\
+Type Voiture(#Type : string, #Marque : string, NbPortes : int, Puissance : int\'e8gre, Kilom\'e9trage : int, Propri =>o Personne(nom) : string, Conducteurs : ListesConducteurs)\
 Type liste_pr\'e9nom : collection de <string>\
 Type Personne(#Nom : string, pr\'e9nom : liste_pr\'e9nom, DateNaissance : date, =Age() : int)\
 Type Conducteur(Nom : string, type Permis : char, dateP : date)\
@@ -138,4 +138,18 @@ CREATE TYPE Voiture AS OBJECT(\
 	Marque VARCHAR(30), \
 	NbPortes int, \
 	Kilom\'e9trage int,\
-	propri REF PErsonne, }
+	Propri REF Personne,\
+	Conducteurs ListeConducteurs);\
+CREATE TABLE tPersonne OF Personne(\
+	PRIMARY KEY(nom));\
+CREATE TABLE tConducteur OF Conducteur(\
+	PRIMARY KEY(nom), FOREIGN KEY(nom) REFERENCES tPersonne(nom)\
+	CHECK (typeP in ('A', 'B', 'E'));\
+CREATE TABLE tVoiture OF Voiture(\
+	PRIMARY KEY(Type, Marque),\
+	SCOPE FOR (propri) is tPersonne);\
+CREATE TYPE BODY Personne IS\
+	MEMBER FUNCTION Age RETURNS int IS\
+		res int;\
+	BEGIN\
+		SELECT}
