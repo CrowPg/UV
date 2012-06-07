@@ -148,8 +148,34 @@ CREATE TABLE tConducteur OF Conducteur(\
 CREATE TABLE tVoiture OF Voiture(\
 	PRIMARY KEY(Type, Marque),\
 	SCOPE FOR (propri) is tPersonne);\
+\
 CREATE TYPE BODY Personne IS\
 	MEMBER FUNCTION Age RETURNS int IS\
 		res int;\
 	BEGIN\
-		SELECT}
+		SELECT MOUNTHS_BETWEEN(SYSDATE, self.dob)/12 INTO res\
+		FROM dual;\
+	RETURN res;\
+	END Age;\
+END;\
+\
+\
+
+\b \ul Exercice : Une entreprise
+\b0 \ulnone \
+\
+deref : permet de r\'e9cup\'e9rer un objet point\'e9 par un OID\
+\
+SELECT d.nom, e.impot(1)\
+FROM enterprise e, directeur d\
+WHERE e.oidDirecteur.nom : d.nom;\
+ou\
+SELECT d.nom, e.impot(1)\
+FROM enterprise e, directeur d\
+WHERE d=deref(e.oidDirecteur);\
+-- l\'e0 on compare les valeurs\
+ou\
+SELECT d.nom, e.impot(1)\
+FROM enterprise e, directeur d\
+WHERE e.oidDirecteur=ref(d);\
+-- l\'e0 on compare les adresses}
