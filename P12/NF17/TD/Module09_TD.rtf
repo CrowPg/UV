@@ -33,19 +33,19 @@ tC de C(#pkA) pkC cl\'e9 candidate\
 tB de B(#pkA)\
 \
 -- Code SQL3 (Oracle) :\
-CREATE TYPE A AS OBJECT(\
+\cf2 CREATE TYPE A AS OBJECT\cf0 (\
 	pk1 int, \
-	att1 VARCHAR(50)) NOT FINAL ; \
+	att1 VARCHAR(50)) \cf2 NOT FINAL\cf0  ; \
 -- NOT FINAL : il y a de l'h\'e9ritage RO derri\'e8re\
 -- AS OBJECT : pour dire que c'est de l'objet\
-CREATE TYPE liste_att2 AS TABLE OF VARCHAR(50);\
+CREATE TYPE liste_att2 \cf2 AS TABLE OF\cf0  VARCHAR(50);\
 -- AS TABLE OF : pour faire une collection de \'85\
-CRATE TYPE C UNDER A(\
+CRATE TYPE C \cf2 UNDER\cf0  A(\
 	pkC int, \
 	att2 liste_att2);\
 -- UNDER : h\'e9rite\
 CREATE TYPE B UNDER A(\
-	C_OID REF C);\
+	C_OID \cf2 REF\cf0  C);\
 -- REF permet de faire une r\'e9f\'e9rence par OID\
 CREATE TABLE tC OF C(\
 	PRIMARY KEY(pkA), \
