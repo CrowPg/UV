@@ -97,4 +97,9 @@ CREATE TYPE BODY Carnivore IS\
 		WHERE self.nom = \'99.carni.nom;\
 		RETURN res;\
 	END PMMT;\
-END; }
+END;\
+\
+SELECT tc.nom, tc.PMMT()\
+FROM tCarni tc\
+ORDER BY tc.poids;\
+CREATE INDEX idx_carni_poids ON tCarni(poids); }
