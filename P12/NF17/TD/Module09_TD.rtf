@@ -51,11 +51,11 @@ CREATE TABLE tC OF C(\
 	PRIMARY KEY(pkA), \
 	UNIQUE pkC, \
 	CHECK (pkC IS NOT NULL))\
-	NESTED TABLE att2 STORE AS NT_tC_att2;\
+	\cf2 NESTED TABLE att2 STORE AS\cf0  NT_tC_att2;\
 -- NESTED TABLE : pour faire un nid de tables \'e0 c\'f4t\'e9 (probl\'e8me de taille sinon)\
 CREATE TABLE tB of B(\
 	PRIMARY KEY(pkA), \
-	SCOPE FOR (C_OID) IS tC);\
+	\cf2 SCOPE FOR (C_OID) IS tC)\cf0 ;\
 \
 
 \b \ul Exercice : Zoologie
@@ -76,4 +76,12 @@ CREATE TYPE Animal AS OBJECT(\
 CREATE TYPE Herbivore UNDER Animal(\
 	PMM float);\
 CREATE TYPE Carnivore UNDER Animal(\
-	\cf3 MEMBER FUNCTION\cf0  PMMT \cf3 RETURNS\cf0  float)}
+	\cf3 MEMBER FUNCTION\cf0  PMMT \cf3 RETURNS\cf0  float)\
+CREATE TYPE Mange AS OBJECT(\
+	REF Carnivore, \
+	REF Herbivore,\
+	PMM : float);\
+CREATE TABLE tCarni OF Carnivore(\
+	PRIMARY KEY(nom));\
+CREATE TABLE THerbi OF Herbivore(\
+	PRIMARY KEY(nom));}
