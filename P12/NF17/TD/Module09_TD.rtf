@@ -89,4 +89,7 @@ CREATE TABLE tMange OF Mange(\
 	SCOPE FOR (herbi) is tHerbi,\
 	SCOPE FOR (carni) is tCarni);\
 CREATE TYPE BODY Carnivore IS\
-	MEMBER FUNCTION PMMT RETURNS float IS}
+	MEMBER FUNCTION PMMT RETURNS float IS\
+	res float;\
+	BEGIN\
+		SELECT SUM(}
