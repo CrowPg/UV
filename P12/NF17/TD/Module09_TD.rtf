@@ -25,7 +25,7 @@ CREATE TABLE Att2(att2 VARCHAR(50), pkC int REFERENCES C(pkC) PRIMARY KEY(att2, 
 CREATE VIEW vA AS (SELECT pkA, att1 FROM B) UNION (SELECT pkA, att1 FROM B);\
 \
 \cf2 TypeA\cf0 (pkA : int, att1 : string)\
-\cf2 Type liste_att2 : collection de string\cf0 \
+\cf2 Type liste_att2 : collection de <string>\cf0 \
 \cf2 TypeC h\'e9rite\cf0  de A(pkC : int, att2 : liste_att2)\
 TypeB h\'e9rite de A(C_OID\cf2  =>o\cf0  C)\
 On ne met pas de contraintes sur les types en RO\
@@ -109,7 +109,10 @@ CREATE INDEX idx_carni_poids ON tCarni(poids);\
 \b \ul Exercice : Des voitures et des hommes 
 \b0 \ulnone \
 \
-Type Voiture(#Type : string, #Marque : string, NbPortes : int, Puissance : int\'e8gre, Kilom\'e9trage : int, Personne =>o Personne(nom) : string)\
-Type liste_pr\'e9nom : collection de pr\'e9nom\
+Type Ref_Cond(Cond_OID =>o Conducteur)\
+Type Liste_Conducteurs : collection de <Ref_Cond>\
+-- On \'e9vite ainsi des probl\'e8mes de redondance. Sans \'e7a, on aurait une table de conducteurs dans la table voiture or nous voulons une table qui fait r\'e9f\'e9rence \'e0 ces conducteurs dans la table voiture !\
+Type Voiture(#Type : string, #Marque : string, NbPortes : int, Puissance : int\'e8gre, Kilom\'e9trage : int, propri =>o Personne(nom) : string)\
+Type liste_pr\'e9nom : collection de <string>\
 Type Personne(#Nom : string, pr\'e9nom : liste_pr\'e9nom, DateNaissance : date, =Age() : int)\
-Type Conducteur}
+Type Conducteur(Nom : string, type Permis : char(1), dateP : date)}
