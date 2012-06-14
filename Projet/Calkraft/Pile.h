@@ -8,6 +8,7 @@
 
 #include "Constante.h"
 #include "Entier.h"
+#include "mainwindow.h"
 
 
 class Pile : public QStack<Constante*>{
